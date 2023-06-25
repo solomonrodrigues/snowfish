@@ -7,3 +7,7 @@ Also contains the home-page and some other simple pages.
 - Contains the project seetings / configuration, and the main urls.py (also wsgi and asgi).
 #### snowfishapp
 - The actual app I want to create.
+## Requirements
+Django 4.2.2\
+python 3.11.3\
+psycopg2 
