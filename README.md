@@ -11,3 +11,11 @@ Also contains the home-page and some other simple pages.
 Django 4.2.2\
 python 3.11.3\
 psycopg2
+
+## Dockerization
+https://semaphoreci.com/community/tutorials/dockerizing-a-python-django-web-application \
+https://blog.logrocket.com/dockerizing-django-app/#prerequisites-for-using-docker \
+```
+docker build . -t snowfish
+docker run snowfish
+```
