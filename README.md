@@ -10,4 +10,4 @@ Also contains the home-page and some other simple pages.
 ## Requirements
 Django 4.2.2\
 python 3.11.3\
-psycopg2 
+psycopg2

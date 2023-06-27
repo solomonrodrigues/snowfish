@@ -8,5 +8,6 @@ from django.views.generic import TemplateView
 def index(request):
     return HttpResponse("Hello, world. You're at the layout index.")
 
+
 class Home(TemplateView):
     template_name = 'base.html'

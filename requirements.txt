@@ -1,0 +1,5 @@
+django==4.2.2
+pip-tools
+psycopg2
+django-bootstrap-v5
+boto3
