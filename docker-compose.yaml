@@ -11,8 +11,7 @@ services: # the different images that will be running as containers
 
 # map data and files from parent directory in host to microservice directory in docker container
     volumes:
-      - ./:/usr/src/app/
-      - ~/.aws/:/root/.aws/:ro
+      - .:/home/app/webapp
 
     ports:
       - 8000:8000 # testing
