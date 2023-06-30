@@ -19,3 +19,6 @@ https://blog.logrocket.com/dockerizing-django-app/#prerequisites-for-using-docke
 docker build . -t snowfish
 docker run snowfish
 ```
+
+## Resources
+https://www.w3schools.com/bootstrap/bootstrap_theme_band.asp

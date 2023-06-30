@@ -3,14 +3,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <title>Snowfish Official Website</title>
         <meta charset="UTF-8">
-        <title>Snowfish</title>
-        <link rel="stylesheet" type="text/css" href="{% static 'layout/css/boostrap.css' %}"/>
+        <meta name="description" content="The official Snowfish website. Featuring news, videos, music, upcoming events, and merchandise.">
+        <meta name="author" content="Solomon Rodrigues">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'layout/css/bootstrap.css' %}"/>
     </head>
 
     <body>
-    <h1>Hello World!</h1>
-    <p>paragraph</p>
-    {% block content %}{% endblock content %}
+    {% block content %}
+    {% endblock content %}
+    <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
     </body>
 </html>
