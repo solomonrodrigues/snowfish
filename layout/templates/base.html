@@ -9,13 +9,19 @@
         <meta name="author" content="Solomon Rodrigues">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static 'layout/css/bootstrap.css' %}"/>
+        {% block head_scripts %}
+        {% endblock head_scripts %}
     </head>
 
     <body>
-    {% block content %}
-    {% endblock content %}
-    <footer class="container-fluid text-center">
-      <p>Footer Text</p>
-    </footer>
+        <div class="p-3 mb-2 bg-dark text-white">
+            {% block content %}
+            {% endblock content %}
+            <footer class="container-fluid text-center">
+                <p>Footer Text</p>
+            </footer>
+            {% block body_scripts %}
+            {% endblock body_scripts %}
+        </div>
     </body>
 </html>
