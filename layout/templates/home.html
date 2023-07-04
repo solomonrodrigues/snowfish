@@ -4,7 +4,7 @@
 {% block content %}
 
 <header role="banner" id="top" class="d-flex align-items-center justify-content-between">
-    <a class="logo ms-3"></a>
+    <a href="#" class="logo ms-3"></a>
     <nav class="d-flex justify-content-end nav nav-pills">
           <a href="#" class="nav-link">News</a>
           <a href="#" class="nav-link">Tour</a>
@@ -18,14 +18,26 @@
 
 <div class="content">
   <div class="jumbotron">
-    <div class="container text-center">
-      <h1>Snowfish</h1>
-      <p>Some text that represents "Me"...</p>
+    <div class="container text-center border border-danger" style="width: 100%; height: 450px;">
+      <h1>Insert Video</h1>
     </div>
   </div>
 
+  <div class="d-flex justify-content-center my-5">
+    <div class="col-6 d-flex justify-content-center align-items-center">
+      <div class="the-monster-upstairs"></div>
+    </div>
+    <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+      <div class="text-center">
+        <h2>THE MONSTER UPSTAIRS</h2>
+        <button class="btn btn-light">OUT NOW!</button>
+      </div>
+    </div>
+  </div>
+
+
   <div class="container-fluid bg-3 text-center">
-    <h3>Some of my Work</h3><br>
+    <h3>Some of our Work</h3><br>
     <div class="row">
       <div class="col-sm-3">
         <p>Some text..</p>
@@ -67,6 +79,12 @@
     </div>
   </div><br><br>
 </div>
+
+<footer role="footer" class="container-fluid text-center">
+  <div>
+    <p>Footer Text</p>
+  </div>
+</footer>
 {% endblock %}
 
 {% block body_scripts %}
