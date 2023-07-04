@@ -22,3 +22,11 @@ docker run snowfish
 
 ## Resources
 https://www.w3schools.com/bootstrap/bootstrap_theme_band.asp
+
+## Inspirations
+https://www.muse.mu/
+https://www.midjourney.com/home/?callbackUrl=%2Fapp%2F
+https://github.com/
+https://www.nbthieves.com/
+https://docs.djangoproject.com/en/4.2/
+
