@@ -118,7 +118,7 @@ p {
     padding: 0.5rem 1rem;
     color: #f8f9fa;
     text-decoration: none;
-    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .bg-dark-navy {
@@ -128,8 +128,11 @@ p {
 a.nav-link:hover,
 a.nav-link:focus,
 a.nav-link:active {
-    color: black; /*#dc3545;*/
-    background: #dc3545;
+    color: #f8f9fa;
+    /*color: black; !*#dc3545;*!*/
+    background-color: #dc3545;
+    /*font-weight: bold;*/
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 .the-monster-upstairs {
