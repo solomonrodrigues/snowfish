@@ -113,11 +113,12 @@ p {
 /*}*/
 
 .nav-link {
-    font-size: 1rem;
+    font-size: 0.9rem;
     display: block;
     padding: 0.5rem 1rem;
     color: #f8f9fa;
     text-decoration: none;
+    border-bottom: solid 4px transparent;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
@@ -129,10 +130,9 @@ a.nav-link:hover,
 a.nav-link:focus,
 a.nav-link:active {
     color: #f8f9fa;
-    /*color: black; !*#dc3545;*!*/
     background-color: #dc3545;
-    /*font-weight: bold;*/
-    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    border-bottom: solid 4px white;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
 }
 
 .the-monster-upstairs {
@@ -140,18 +140,16 @@ a.nav-link:active {
     display: block;
     float: left;
     overflow: hidden;
-    /*text-decoration: none;*/
-    /*text-indent: 100%;*/
-    width: 300px;
-    height: 300px;
+    width: 380px;
+    height: 380px;
     background-size: contain;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
 }
 
 .the-monster-upstairs:hover {
     cursor: pointer;
-    width: 310px;
-    height: 310px;
+    width: 390px;
+    height: 390px;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
 }
 

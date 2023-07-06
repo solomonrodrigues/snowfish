@@ -17,8 +17,28 @@
 
     <body>
         <div class="bg-dark-navy text-white">
+            <header role="banner" id="top" class="d-flex justify-content-center">
+              <div class="col-lg-10 d-flex justify-content-between align-items-center">
+                <a href="{% url 'home' %}" class="logo ms-3"></a>
+                <nav class="d-flex justify-content-end nav">
+                      <a href="#" class="nav-link">News</a>
+                      <a href="{% url 'tour-dates' %}" class="nav-link">Tour</a>
+                      <a href="#" class="nav-link">Videos</a>
+                      <a href="#" class="nav-link">Music</a>
+                      <a href="#" class="nav-link">Photos</a>
+                      <a href="#" class="nav-link">Merch</a>
+                      <a href="#" class="nav-link">Connect</a>
+                </nav>
+              </div>
+            </header>
             {% block content %}
             {% endblock content %}
+            <footer role="footer" class="container-fluid text-center">
+              <div>
+                <p>Footer Text</p>
+              </div>
+            </footer>
+            <script src="./static/layout/js/sticky-nav.js"></script>
             {% block body_scripts %}
             {% endblock body_scripts %}
         </div>

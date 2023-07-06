@@ -3,21 +3,6 @@
 
 {% block content %}
 
-<header role="banner" id="top" class="d-flex justify-content-center">
-  <div class="col-lg-10 d-flex justify-content-between align-items-center">
-    <a href="#" class="logo ms-3"></a>
-    <nav class="d-flex justify-content-end nav">
-          <a href="#" class="nav-link">News</a>
-          <a href="#" class="nav-link">Tour</a>
-          <a href="#" class="nav-link">Videos</a>
-          <a href="#" class="nav-link">Music</a>
-          <a href="#" class="nav-link">Photos</a>
-          <a href="#" class="nav-link">Merch</a>
-          <a href="#" class="nav-link">Connect</a>
-    </nav>
-  </div>
-</header>
-
 <div class="content">
   <div class="jumbotron">
       <div class="jumbo-image"></div>
@@ -80,31 +65,4 @@
   </div><br><br>
 </div>
 
-<footer role="footer" class="container-fluid text-center">
-  <div>
-    <p>Footer Text</p>
-  </div>
-</footer>
-{% endblock %}
-
-{% block body_scripts %}
-<script>
-  // When the user scrolls the page, execute myFunction
-  window.onscroll = function() {stickyNav()};
-
-  // Get the header
-  let header = document.getElementById("top");
-
-  // Get the offset position of the navbar
-  let sticky = header.offsetTop;
-
-  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-  function stickyNav() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-</script>
 {% endblock %}
