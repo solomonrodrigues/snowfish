@@ -61,8 +61,6 @@ p {
 }
 
 [role="banner"] .logo {
-    /*font-size: 40px;*/
-    /*font-size: 4rem;*/
     /*font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;*/
     background: url(../img/gt_wht_trnsprnt.svg) 0 0 no-repeat;
     /*color: #0e1117;*/
@@ -73,8 +71,8 @@ p {
     overflow: hidden;
     text-decoration: none;
     text-indent: 100%;
-    width: 208px;/*104px;*/
-    height: 72px; /*36px;*/
+    width: 156px; /*208px;*/ /*104px;*/
+    height: 54px; /*72px;*/ /*36px;*/
     cursor: pointer;
 }
 
@@ -115,6 +113,7 @@ p {
 /*}*/
 
 .nav-link {
+    font-size: 1rem;
     display: block;
     padding: 0.5rem 1rem;
     color: #f8f9fa;
@@ -129,7 +128,8 @@ p {
 a.nav-link:hover,
 a.nav-link:focus,
 a.nav-link:active {
-  color: #dc3545;
+    color: black; /*#dc3545;*/
+    background: #dc3545;
 }
 
 .the-monster-upstairs {
