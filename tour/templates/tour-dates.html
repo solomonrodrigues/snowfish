@@ -3,67 +3,24 @@
 
 {% block content %}
 
-<div class="content">
-  <h1 class="text-center">Tour Dates</h1>
-<!--  <div class="jumbotron">-->
-<!--      <div class="jumbo-image"></div>-->
-<!--  </div>-->
+<div class="py-sm-5 py-3 px-5 px-2">
+
+  <h1 class="text-left">TOUR DATES</h1>
 
   <div class="d-flex justify-content-center my-5">
-    <div class="col-6 d-flex justify-content-center align-items-center">
-      <div class="the-monster-upstairs"></div>
-    </div>
-    <div class="col-6 d-flex flex-column align-items-center justify-content-center">
-      <div class="text-center">
-        <h2>THE MONSTER UPSTAIRS</h2>
-        <button class="btn btn-light">OUT NOW</button>
-      </div>
-    </div>
+    <ol id="tour-dates-list" class="tour-dates-list">
+      {% for tour_date in tour_dates %}
+      <li>
+        <div>
+          <h5>{{ tour_date.date }}</h5>
+          <p>{{ tour_date.city }}</p>
+          <p>{{ tour_date.venue }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
   </div>
 
-
-  <div class="container-fluid bg-3 text-center">
-    <h3>Some of our Work</h3><br>
-    <div class="row">
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-    </div>
-  </div><br>
-
-  <div class="container-fluid bg-3 text-center">
-    <div class="row">
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-      <div class="col-sm-3">
-        <p>Some text..</p>
-        <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      </div>
-    </div>
-  </div><br><br>
 </div>
 
 {% endblock %}
