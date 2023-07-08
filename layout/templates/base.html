@@ -22,7 +22,7 @@
                 <a href="{% url 'home' %}" class="logo ms-3"></a>
                 <nav class="d-flex justify-content-end nav">
                       <a href="#" class="nav-link">News</a>
-                      <a href="{% url 'tour-dates' %}" class="nav-link">Tour</a>
+                      <a href="{% url 'tour' %}" class="nav-link {% if request.path == '/tour/' %}active{% endif %}">Tour</a>
                       <a href="#" class="nav-link">Videos</a>
                       <a href="#" class="nav-link">Music</a>
                       <a href="#" class="nav-link">Photos</a>
