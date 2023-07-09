@@ -3,24 +3,28 @@
 
 {% block content %}
 
-<div class="py-sm-5 py-3 px-5 px-2">
+<div class="row">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-lg-5 p-4 col-lg-10 col-12">
 
-  <h1 class="text-left">TOUR DATES</h1>
+      <h1 class="text-left">TOUR DATES</h1>
 
-  <div class="d-flex justify-content-center my-5">
-    <ol id="tour-dates-list" class="tour-dates-list">
-      {% for tour_date in tour_dates %}
-      <li>
-        <div>
-          <h5>{{ tour_date.date }}</h5>
-          <p>{{ tour_date.city }}</p>
-          <p>{{ tour_date.venue }}</p>
-        </div>
-      </li>
-      {% endfor %}
-    </ol>
+      <div class="mt-5">
+        <ol id="tour-dates-list" class="tour-dates-list">
+          {% for date in tour_dates %}
+          <li>
+            <div class="mb-3">
+              <h5>{{ date.date }}</h5>
+              <p>{{ date.city }}, {{ date.country }}</p>
+              <p class="text-secondary">{{ date.venue }}</p>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+    </div>
   </div>
-
 </div>
 
 {% endblock %}
