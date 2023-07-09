@@ -1,10 +1,12 @@
 from django.db import models
+from django.urls import reverse
 
 
 # Create your models here.
 
 
 class TourDate(models.Model):
+    slug = models.SlugField(null=False, unique=True)
     date = models.DateField()
     start_time = models.TimeField(null=True, blank=True)
     title = models.CharField(max_length=100, null=True, blank=True)
@@ -19,6 +21,9 @@ class TourDate(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse("tour-date", kwargs={"slug": self.slug})
 
     class Meta:
         verbose_name_plural = "TourDates"
