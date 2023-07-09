@@ -30,3 +30,6 @@ https://github.com/ \
 https://www.nbthieves.com/ \
 https://docs.djangoproject.com/en/4.2/
 
+## Icon sources
+https://blog.hootsuite.com/social-media-icons/
+
