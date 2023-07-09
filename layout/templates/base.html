@@ -18,34 +18,32 @@
 <!--        <div class="bg-dark-navy text-white">-->
         <div class="wrapper"> <!-- do we need these? wrapper, content-page, content?? -->
             <div class="content-page">
-                <div class="content">
-                    <header role="banner" id="top" class="d-flex justify-content-center">
-                      <div class="col-lg-10 d-flex justify-content-between align-items-center">
-                        <a href="{% url 'home' %}" class="logo ms-3"></a>
-                        <nav class="d-flex justify-content-end nav">
-                              <a href="#" class="nav-link">News</a>
-                              <a href="{% url 'tour' %}" class="nav-link {% if request.path == '/tour/' %}active{% endif %}">Tour</a>
-                              <a href="#" class="nav-link">Videos</a>
-                              <a href="#" class="nav-link">Music</a>
-                              <a href="#" class="nav-link">Photos</a>
-                              <a href="#" class="nav-link">Merch</a>
-                              <a href="#" class="nav-link">Connect</a>
-                        </nav>
-                      </div>
-                    </header>
-                    <div class="content">
-                    {% block content %}
-                    {% endblock content %}
-                    </div>
-                    <footer role="footer" class="container-fluid text-center">
-                      <div>
-                        <p>Footer Text</p>
-                      </div>
-                    </footer>
-                    <script src="./static/layout/js/sticky-nav.js"></script>
-                    {% block body_scripts %}
-                    {% endblock body_scripts %}
-                </div>
+                <header role="banner" id="top" class="d-flex justify-content-center">
+                  <div class="col-lg-10 d-flex justify-content-between align-items-center">
+                    <a href="{% url 'home' %}" class="logo ms-3"></a>
+                    <nav class="d-flex justify-content-end nav">
+                          <a href="#" class="nav-link">News</a>
+                          <a href="{% url 'tour' %}" class="nav-link {% if request.path == '/tour/' %}active{% endif %}">Tour</a>
+                          <a href="#" class="nav-link">Videos</a>
+                          <a href="#" class="nav-link">Music</a>
+                          <a href="#" class="nav-link">Photos</a>
+                          <a href="#" class="nav-link">Merch</a>
+                          <a href="#" class="nav-link">Connect</a>
+                    </nav>
+                  </div>
+                </header>
+                <main class="content">
+                {% block content %}
+                {% endblock content %}
+                </main>
+                <footer role="footer">
+                  <div>
+                    <p>Footer Text</p>
+                  </div>
+                </footer>
+                <script src="./static/layout/js/sticky-nav.js"></script>
+                {% block body_scripts %}
+                {% endblock body_scripts %}
             </div>
         </div>
     </body>

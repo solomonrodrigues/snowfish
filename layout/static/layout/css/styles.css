@@ -64,13 +64,16 @@ p {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: transparent; /*#191f29;*/
     overflow: hidden;
     margin: 0;
     padding: 1rem;
     z-index: 0;
     text-transform: uppercase;
+    text-align: center;
+    /*temp*/
+    background:cornflowerblue;
 }
 
 .bg-dark-navy {
@@ -153,4 +156,11 @@ a.nav-link:active {
 
 .tour-dates-list {
     list-style: none;
+}
+
+.content {
+    /*The header and footer are 70px each, so minus 140 from the content, this allows the footer to line up with the bottom of the page*/
+    min-height: calc(100vh - 140px);
+    display: flex;
+    flex-direction: column;
 }
