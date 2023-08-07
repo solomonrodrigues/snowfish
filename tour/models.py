@@ -26,4 +26,5 @@ class TourDate(models.Model):
         return reverse("tour-date", kwargs={"slug": self.slug})
 
     class Meta:
-        verbose_name_plural = "TourDates"
+        verbose_name = "Tour Date"
+        verbose_name_plural = "Tour Dates"

@@ -18,10 +18,12 @@ from django.contrib import admin
 from django.urls import include, path
 from layout.urls import urlpatterns as layout_urls
 from tour.urls import urlpatterns as tour_urls
+from news.urls import urlpatterns as news_urls
 
 
 urlpatterns = [
     path('', include(layout_urls)),
     path('', include(tour_urls)),
+    path('', include(news_urls)),
     path('admin/', admin.site.urls),
 ]

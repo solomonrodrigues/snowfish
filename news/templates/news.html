@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-lg-5 p-4 col-lg-10 col-12">
+
+      <h1 class="text-left">NEWS</h1>
+
+      <div class="mt-5">
+        <ol id="tour-dates-list" class="tour-dates-list">
+          {% for post in news_posts %}
+          <li>
+            <div class="col-sm-6">
+              <div class="card bg-dark border-light mb-3">
+                <div class="card-header">
+                  <h5 class="h4 card-title my-1">{{ post.title }}</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">{{ post.text }}<br><br></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <p class="card-text text-secondary">{{ post.timestamp }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

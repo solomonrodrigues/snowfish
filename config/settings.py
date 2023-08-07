@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'layout',
     'snowfishapp',
     'tour',
+    'news',
 ]
 
 MIDDLEWARE = [
