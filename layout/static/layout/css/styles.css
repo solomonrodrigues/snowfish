@@ -45,7 +45,7 @@ p {
 
 [role="banner"] .logo {
     /*font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;*/
-    background: url(../img/gt_wht_trnsprnt.svg) 0 0 no-repeat;
+    background: url(../img/snowfish-logo-white.svg) 0 0 no-repeat;
     /*color: #0e1117;*/
     display: block;
     float: left;
@@ -55,7 +55,7 @@ p {
     text-decoration: none;
     text-indent: 100%;
     width: 156px; /*208px;*/ /*104px;*/
-    height: 54px; /*72px;*/ /*36px;*/
+    height: 24px; /*72px;*/ /*36px;*/
     cursor: pointer;
 }
 
