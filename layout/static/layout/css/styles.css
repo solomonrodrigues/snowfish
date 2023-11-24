@@ -278,3 +278,15 @@ a.nav-link:active {
   }
 }
 
+/* MUSIC */
+.release {
+    text-align: center;
+}
+
+.retail-links a {
+    background: green;
+}
+
+.retail-links a:hover {
+    background: lime;
+}
