@@ -70,6 +70,10 @@ p {
     cursor: pointer;
 }
 
+[role="banner"] .logo:hover {
+    outline: solid 4px var(--main-green);
+}
+
 [role="footer"] {
     position: relative;
     right: 0;
