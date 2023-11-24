@@ -1,10 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% load static %}
 
-</body>
-</html>
+{% block content %}
+
+<div class="row">
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="p-lg-5 p-4 col-lg-10 col-12">
+
+      <h1 class="text-left">TOUR DATE DETAILS</h1>
+
+      <div class="mt-5">
+        <div class="col-sm-6">
+          <div class="card bg-dark border-light mb-3">
+            <div class="card-header">
+              <h5 class="card-title my-1">{{ tourdate.title }} - {{ tourdate.date }}</h5>
+            </div>
+            <div class="card-body">
+              <p class="card-text">{{ tourdate.city }}, {{ tourdate.country }}</p>
+              <p class="card-text text-secondary">{{ tourdate.venue }}</p>
+              <p class="card-text">{{ tourdate.description }}</p>
+              {% if tourdate.start_time %}
+                <p class="card-text">Start Time: {{ tourdate.start_time }}</p>
+              {% endif %}
+              {% if tourdate.supports %}
+                <p class="card-text">Supports: {{ tourdate.supports }}</p>
+              {% endif %}
+              {% if tourdate.ticket_url %}
+                <p class="card-text"><a href="{{ tourdate.ticket_url }}" target="_blank">Get Tickets</a></p>
+              {% endif %}
+              {% if tourdate.image %}
+                <img src="{{ tourdate.image.url }}" alt="{{ tourdate.title }}" class="img-fluid">
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
