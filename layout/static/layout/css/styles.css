@@ -212,58 +212,49 @@ a.nav-link:active {
     display: inline-block;
 }
 
-.instagram {
-    background: url(../img/social/instagram.png) 0 0 no-repeat;
+.social-icon {
     width: 30px;
     height: 30px;
-    background-size: contain;
+    background-size: contain !important;
     display: block;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media screen and (max-width: 600px) {
+    .social-icon {
+        width: 20px; /* Adjust the width to your preference */
+        height: 20px; /* Use a percentage for the height to maintain aspect ratio */
+    }
+    .youtube {
+        height: 13px;
+    }
+}
+
+.instagram {
+    background: url(../img/social/instagram.png) 0 0 no-repeat;
 }
 
 .facebook {
     background: url(../img/social/facebook.png) 0 0 no-repeat;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    display: block;
 }
 
 .twitter {
     background: url(../img/social/twitter.png) 0 0 no-repeat;
-    width: 30px;
-    height: 25px;
-    background-size: contain;
-    display: block;
 }
 
 .youtube {
     background: url(../img/social/youtube.png) 0 0 no-repeat;
-    width: 30px;
     height: 20px;
-    background-size: contain;
-    display: block;
 }
 
 .tiktok {
     background: url(../img/social/tiktok.png) 0 0 no-repeat;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    display: block;
 }
 
 .spotify {
     background: url(../img/social/spotify.png) 0 0 no-repeat;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    display: block;
 }
 
 .apple-music {
     background: url(../img/social/apple-music.svg) 0 0 no-repeat;
-    width: 30px;
-    height: 30px;
-    background-size: contain;
-    display: block;
 }
