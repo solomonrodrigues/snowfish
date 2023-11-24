@@ -50,7 +50,7 @@ p {
     padding: 10px 0 6px;
     position: relative;
     z-index: 0;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     height: 70px;
 }
 
@@ -258,3 +258,19 @@ a.nav-link:active {
 .apple-music {
     background: url(../img/social/apple-music.svg) 0 0 no-repeat;
 }
+
+/* VIDEOS */
+.responsive-iframe {
+  width: 230px
+  height: 157px;
+  margin: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .responsive-iframe {
+    width: 560px;
+    height: 315px;
+    margin: 4px;
+  }
+}
+
