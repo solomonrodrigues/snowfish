@@ -2,8 +2,8 @@
     <div class="col-lg-10 d-flex justify-content-between align-items-center">
     <a href="{% url 'home' %}" class="logo ms-3"></a>
     <nav class="d-flex justify-content-end nav">
-        <a href="{% url 'news' %}" class="nav-link {% if request.path == '/news/' %}active{% endif %}">News</a>
-        <a href="{% url 'tour' %}" class="nav-link {% if request.path == '/tour/' %}active{% endif %}">Tour</a>
+        <a href="{% url 'news' %}" class="nav-link {% if '/news/' in request.path %}active{% endif %}">News</a>
+        <a href="{% url 'tour' %}" class="nav-link {% if '/tour/' in request.path %}active{% endif %}">Tour</a>
         <a href="#" class="nav-link">Videos</a>
         <a href="#" class="nav-link">Music</a>
         <a href="#" class="nav-link">Photos</a>
