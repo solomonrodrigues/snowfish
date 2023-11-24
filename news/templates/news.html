@@ -27,6 +27,12 @@
               </div>
             </div>
           </li>
+          {% empty %}
+          <li>
+            <div class="col-sm-6">
+              <p>There is no news to show.</p>
+            </div>
+          </li>
           {% endfor %}
         </ol>
       </div>

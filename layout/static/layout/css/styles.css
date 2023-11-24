@@ -41,6 +41,7 @@ p {
     position: relative;
     z-index: 0;
     text-transform: uppercase;
+    height: 70px;
 }
 
 [role="banner"] .logo {
@@ -97,14 +98,13 @@ a.nav-link:focus,
 a.nav-link:active {
     color: #f8f9fa;
     background-color: #dc3545;
-    border-bottom: solid 4px white;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
 }
 
 .active {
     color: #f8f9fa;
     background-color: #dc3545;
-    border-bottom: solid 4px white;
+    border: solid 4px white;
 }
 
 .the-monster-upstairs {
@@ -201,6 +201,14 @@ a.nav-link:active {
 
 .footer-text p {
     display: inline-block;
+}
+
+.instagram {
+    background: url(../img/social/instagram.png) 0 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    display: block;
 }
 
 .facebook {
