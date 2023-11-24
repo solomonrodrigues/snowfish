@@ -1,7 +1,12 @@
+:root {
+  --main-red: #f8f9fa;
+  --main-green: #00ff00;
+}
+
 body, html {
     color: #fff;
     font-size: 16px;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: "FreeMono", monospace;
     background-color: black; /*#0b151a;*/ /* #0a0f17 */
     line-height: 1.35;
     background-repeat: repeat;
@@ -12,6 +17,11 @@ body, html {
     height: 100%;
     min-height: auto;
     overflow-x: hidden; /* This prevents horizontal scrolling */
+}
+
+h1, h2, h3 {
+    font-family: "Georgia", serif;
+    font-weight: 700;
 }
 
 p {
@@ -87,22 +97,21 @@ p {
     font-size: 0.9rem;
     display: block;
     padding: 0.5rem 1rem;
-    color: #f8f9fa;
+    color: var(--main-red);
     text-decoration: none;
-    border-bottom: solid 4px transparent;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
 a.nav-link:hover,
 a.nav-link:focus,
 a.nav-link:active {
-    color: #f8f9fa;
+    color: var(--main-red);
     background-color: #dc3545;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
 }
 
 .active {
-    color: #f8f9fa;
+    color: var(--main-red);
     background-color: #dc3545;
     border: solid 4px white;
 }
@@ -120,9 +129,6 @@ a.nav-link:active {
 
 .the-monster-upstairs:hover {
     cursor: pointer;
-    /*width: 390px;
-    height: 390px;
-    transition: width 0.15s ease-in-out, height 0.15s ease-in-out;*/
     outline: solid 3px white;
 }
 
@@ -195,6 +201,8 @@ a.nav-link:active {
 }
 
 .footer-text {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 100;
     display: flex;
     align-items: center;
     font-size: 1rem;

@@ -10,6 +10,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{% static 'layout/css/styles.css' %}"/>
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'layout/favicon_io/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'layout/favicon_io/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'layout/favicon_io/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'layout/favicon_io/site.webmanifest' %}">
         {% block head_scripts %}
         {% endblock head_scripts %}
     </head>
@@ -38,7 +42,7 @@
                 </main>
                 <footer role="footer" class="d-flex justify-content-center">
                   <div class="footer-contents col-lg-10">
-                      <ul class="footer-social">
+                      <ul class="footer-social col-6 justify-content-between">
                           <li>
                               <a class="facebook" href="https://www.facebook.com/snowfishband"></a>
                           </li>
@@ -62,7 +66,7 @@
                           </li>
                       </ul>
                       <div class="footer-text">
-                          <p>Snowfish 2023</p>
+                          <p>©<span id="currentYear"></span> Snowfish</p>
                       </div>
                   </div>
                 </footer>
@@ -73,3 +77,9 @@
         </div>
     </body>
 </html>
+
+{% block extra_javascript %}
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+{% endblock %}
