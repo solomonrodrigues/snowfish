@@ -490,3 +490,10 @@ a.nav-link:focus {
     min-width: 196px;
   }
 }
+
+@media (max-width: 700px) {
+  .custom-button {
+    font-size: 14px;
+    min-width: 100px;
+  }
+}
