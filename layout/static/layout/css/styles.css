@@ -1,5 +1,6 @@
 :root {
   --main-red: #f8f9fa;
+  --main-light-red: #ff7f7f;
   --main-green: #00ff00;
 }
 
@@ -55,9 +56,7 @@ p {
 }
 
 [role="banner"] .logo {
-    /*font-family: "Roboto", Corbel, Avenir, "Lucida Grande", "Lucida Sans", sans-serif;*/
     background: url(../img/snowfish-logo-white.svg) 0 0 no-repeat;
-    /*color: #0e1117;*/
     display: block;
     float: left;
     /*font-weight: 700;*/
@@ -71,7 +70,7 @@ p {
 }
 
 [role="banner"] .logo:hover {
-    outline: solid 4px var(--main-green);
+    transform: scale(1.05);
 }
 
 [role="footer"] {
@@ -102,22 +101,22 @@ p {
     display: block;
     padding: 0.5rem 1rem;
     color: var(--main-red);
+    color: white;
     text-decoration: none;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    text-align: center;
+    line-height: 50px;
 }
 
 a.nav-link:hover,
-a.nav-link:focus,
-a.nav-link:active {
+a.nav-link:focus {
     color: var(--main-red);
     background-color: #dc3545;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
 }
 
 .active {
-    color: var(--main-red);
-    background-color: #dc3545;
-    border: solid 4px white;
+    color: var(--main-light-red);
 }
 
 .the-monster-upstairs {
@@ -127,6 +126,11 @@ a.nav-link:active {
     overflow: hidden;
     width: 380px;
     height: 380px;
+
+    /*width: 33vh; /* Use percentage for width
+    height: 33vh; /* Automatically adjust height to maintain aspect ratio
+    max-width: 380px; /* Set a maximum width if needed */
+
     background-size: contain;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
 }
@@ -137,7 +141,7 @@ a.nav-link:active {
 }
 
 .jumbotron {
-    height: 450px;
+    height: 33vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -289,4 +293,18 @@ a.nav-link:active {
 
 .retail-links a:hover {
     background: lime;
+}
+
+/* BUTTONS */
+.btn--primary {
+    background: transparent;
+    color: white !important;
+    outline: solid 2px white;
+    border-radius: 1rem;
+}
+
+.btn--primary:hover,
+.btn--primary:focus,
+.btn--primary:active {
+    background: mediumblue;
 }
