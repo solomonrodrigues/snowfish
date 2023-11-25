@@ -1,53 +1,14 @@
-<header role="banner" id="top" class="d-flex justify-content-center p-0">
-    <div class="col-lg-10 d-flex justify-content-between align-items-center">
-    <a href="{% url 'home' %}" class="logo ms-3"></a>
-    <nav class="d-flex justify-content-end nav h-100">
-        <a href="{% url 'news' %}" class="nav-link {% if '/news/' in request.path %}active{% endif %}">News</a>
-        <a href="{% url 'tour' %}" class="nav-link {% if '/tour/' in request.path %}active{% endif %}">Tour</a>
-        <a href="{% url 'videos' %}" class="nav-link {% if '/videos/' in request.path %}active{% endif %}">Videos</a>
-        <a href="{% url 'music' %}" class="nav-link {% if '/music/' in request.path %}active{% endif %}">Music</a>
-        <a href="{% url 'photos' %}" class="nav-link {% if '/photos/' in request.path %}active{% endif %}">Photos</a>
-        <a href="#" class="nav-link">Merch</a>
-        <a href="#" class="nav-link">Connect</a>
-    </nav>
-    </div>
+<header class="header">
+    <a href="{% url 'home' %}" class="logo"></a>
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a href="{% url 'news' %}" class="{% if '/news/' in request.path %}active{% endif %}">News</a></li>
+        <li><a href="{% url 'tour' %}" class="{% if '/tour/' in request.path %}active{% endif %}">Tour</a></li>
+        <li><a href="{% url 'videos' %}" class="{% if '/videos/' in request.path %}active{% endif %}">Videos</a></li>
+        <li><a href="{% url 'music' %}" class="{% if '/music/' in request.path %}active{% endif %}">Music</a></li>
+        <li><a href="{% url 'photos' %}" class="{% if '/photos/' in request.path %}active{% endif %}">Photos</a></li>
+        <li><a href="#" class="">Merch</a></li>
+        <li><a href="#" class="">Connect</a></li>
+    </ul>
 </header>
-
-<!--Collapsable Navbar (needs reworking)-->
-
-<!--<header role="banner" id="top" class="d-flex justify-content-center">-->
-<!--    <div class="col-lg-10">-->
-<!--        <nav class="navbar navbar-expand-lg navbar-dark">-->
-<!--            <a href="{% url 'home' %}" class="navbar-brand ms-3 logo"></a>-->
-<!--            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"-->
-<!--                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
-<!--            <div class="collapse navbar-collapse" id="navbarNav">-->
-<!--                <ul class="navbar-nav me-auto align-items-center active">-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="{% url 'news' %}" class="nav-link {% if '/news/' in request.path %}active{% endif %}">News</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="{% url 'tour' %}" class="nav-link {% if '/tour/' in request.path %}active{% endif %}">Tour</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="{% url 'videos' %}" class="nav-link {% if '/videos/' in request.path %}active{% endif %}">Videos</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="{% url 'music' %}" class="nav-link {% if '/music/' in request.path %}active{% endif %}">Music</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="{% url 'photos' %}" class="nav-link {% if '/photos/' in request.path %}active{% endif %}">Photos</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="#" class="nav-link">Merch</a>-->
-<!--                    </li>-->
-<!--                    <li class="nav-item">-->
-<!--                        <a href="#" class="nav-link">Connect</a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--        </nav>-->
-<!--    </div>-->
-<!--</header>-->

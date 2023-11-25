@@ -1,20 +1,21 @@
 :root {
-  --main-red: #f8f9fa;
+  --main-red: #dc3545;
   --main-light-red: #ff7f7f;
+  --main-gray: #282828;
   --main-green: #00ff00;
 }
 
 body, html {
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
     font-family: "FreeMono", monospace;
     background-color: black; /*#0b151a;*/ /* #0a0f17 */
     line-height: 1.35;
     background-repeat: repeat;
     background-size: 100% auto;
-    padding-top: 0 !important;
     margin: 0;
     padding: 0;
+    padding-top: 0 !important;
     height: 100%;
     min-height: auto;
     overflow-x: hidden; /* This prevents horizontal scrolling */
@@ -35,7 +36,13 @@ p {
 
 @media only screen and (min-width: 992px){
     body, html {
-        font-size: 1.2rem;
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    body, html {
+        font-size: 20px;
     }
 }
 
@@ -45,7 +52,7 @@ p {
 
 [role="banner"] {
     background: #191f29; /*#1a1827;*/
-    background: #282828;
+    background: var(--main-gray);
     overflow: hidden;
     margin: 0;
     padding: 10px 0 6px;
@@ -55,7 +62,7 @@ p {
     height: 70px;
 }
 
-[role="banner"] .logo {
+.logo {
     background: url(../img/snowfish-logo-white.svg) 0 0 no-repeat;
     display: block;
     float: left;
@@ -69,7 +76,7 @@ p {
     cursor: pointer;
 }
 
-[role="banner"] .logo:hover {
+.logo:hover {
     transform: scale(1.05);
 }
 
@@ -89,7 +96,8 @@ p {
     text-align: center;
     /*temp*/
     background: #191f29;
-    background: #282828;
+    background: var(--main-gray);
+    margin-top: 70px;
 }
 
 .bg-dark-navy {
@@ -113,10 +121,6 @@ a.nav-link:focus {
     color: var(--main-red);
     background-color: #dc3545;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
-}
-
-.active {
-    color: var(--main-light-red);
 }
 
 .the-monster-upstairs {
@@ -186,6 +190,7 @@ a.nav-link:focus {
     min-height: calc(100vh - 140px);
     display: flex;
     flex-direction: column;
+    padding-top: 67px; /*accounting for nav bar*/
 }
 
 .footer-contents {
@@ -307,4 +312,149 @@ a.nav-link:focus {
 .btn--primary:focus,
 .btn--primary:active {
     background: mediumblue;
+}
+
+/* header */
+
+.header {
+  background-color: var(--main-gray);
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  text-color: white;
+
+  /*display: flex;
+  align-items: center;*/
+  /*justify-content: space-between;*/
+}
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: var(--main-gray);
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: white;
+  transition: background-color 0.4s, color 0.4s; /* Add transition */
+}
+
+.header li a:hover,
+.header .menu-btn:hover,
+.header li a.active:hover {
+  background-color: var(--main-red);
+  color: white;
+}
+
+.header li a.active {
+    color: var(--main-light-red);
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+  position: relative;
+  margin: 20px;
+}
+
+/* menu */
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: white;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 500px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: none;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
 }
