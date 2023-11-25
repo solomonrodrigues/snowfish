@@ -34,7 +34,7 @@
                 <p class="card-text">Supports: {{ tourdate.supports }}</p>
               {% endif %}
               {% if tourdate.ticket_url %}
-                <p class="card-text"><a href="{{ tourdate.ticket_url }}" target="_blank">Get Tickets</a></p>
+                <a class="btn btn-primary" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
               {% endif %}
               {% if tourdate.image %}
                 <img src="{{ tourdate.image.url }}" alt="{{ tourdate.title }}" class="img-fluid">

@@ -26,7 +26,12 @@
                   <p class="card-text">{{ date.city }}, {{ date.country }}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <p class="card-text text-secondary">{{ date.venue }}</p>
-                    <a class="btn btn-secondary" href="{% url 'tour-date' date.slug %}">View</a>
+                    <div>
+                      {% if date.ticket_url %}
+                        <a class="btn btn-primary" href="{{ date.ticket_url }}" target="_blank">Tickets</a>
+                      {% endif %}
+                      <a class="btn btn-secondary" href="{% url 'tour-date' date.slug %}">Info</a>
+                    </div>
                   </div>
                 </div>
               </div>

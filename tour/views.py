@@ -11,7 +11,7 @@ class TourDates(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['tour_dates'] = self.get_queryset()
+        context['tour_dates'] = self.get_queryset().order_by('-date')
         return context
 
 
