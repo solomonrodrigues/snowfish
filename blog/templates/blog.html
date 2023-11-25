@@ -17,14 +17,14 @@
         <ol id="tour-dates-list" class="tour-dates-list">
           {% for post in blog_posts %}
           <li>
-            <div class="col-sm-6">
+            <div class="col-12">
               <div class="card bg-dark border-light mb-3">
                 <div class="card-header">
                   <h3 class="h4 card-title my-1">{{ post.title }}</h3>
                 </div>
                 <div class="card-body">
                   <p class="card-text">{{ post.text }}<br><br></p>
-                  <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex justify-content-end align-items-center">
                     <p class="card-text text-secondary">{{ post.timestamp }}</p>
                   </div>
                 </div>
