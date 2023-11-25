@@ -15,16 +15,16 @@
           <a href="{% url 'tour' %}">< Tour Dates</a>
       </nav>
 
-      <h1 class="text-left">TOUR DATE DETAILS</h1>
+      <h1 class="text-left">{{ tourdate.title }}</h1>
 
       <div class="mt-5">
         <div class="col-sm-6">
           <div class="card bg-dark border-light mb-3">
             <div class="card-header">
-              <h5 class="card-title my-1">{{ tourdate.title }} - {{ tourdate.date }}</h5>
+              <h5 class="card-title my-1">{{ tourdate.city }}, {{ tourdate.country }} - {{ tourdate.date }}</h5>
             </div>
             <div class="card-body">
-              <p class="card-text">{{ tourdate.city }}, {{ tourdate.country }}</p>
+<!--              <p class="card-text">{{ tourdate.city }}, {{ tourdate.country }}</p>-->
               <p class="card-text text-secondary">{{ tourdate.venue }}</p>
               <p class="card-text">{{ tourdate.description }}</p>
               {% if tourdate.start_time %}
@@ -34,7 +34,7 @@
                 <p class="card-text">Supports: {{ tourdate.supports }}</p>
               {% endif %}
               {% if tourdate.ticket_url %}
-                <a class="btn btn-primary" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
+                <a class="btn btn-primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
               {% endif %}
               {% if tourdate.image %}
                 <img src="{{ tourdate.image.url }}" alt="{{ tourdate.title }}" class="img-fluid">
