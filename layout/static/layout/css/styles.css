@@ -7,7 +7,7 @@
 
 body, html {
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     font-family: "FreeMono", monospace;
     background-color: black; /*#0b151a;*/ /* #0a0f17 */
     line-height: 1.35;
@@ -323,10 +323,6 @@ a.nav-link:focus {
   width: 100%;
   z-index: 3;
   text-color: white;
-
-  /*display: flex;
-  align-items: center;*/
-  /*justify-content: space-between;*/
 }
 
 .header ul {
@@ -442,7 +438,7 @@ a.nav-link:focus {
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 835px) { /*48em*/
   .header li {
     float: left;
   }
