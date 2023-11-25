@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    <title>Snowfish | Tour</title>
+{% endblock title %}
+
 {% block content %}
 
 <div class="row">
@@ -12,13 +16,6 @@
       <div class="mt-5">
         <ol id="tour-dates-list" class="tour-dates-list">
           {% for date in tour_dates %}
-<!--          <li>-->
-<!--            <div class="tour-date-item">-->
-<!--              <h5>{{ date.date }}</h5>-->
-<!--              <p>{{ date.city }}, {{ date.country }}</p>-->
-<!--              <p class="text-secondary">{{ date.venue }}</p>-->
-<!--            </div>-->
-<!--          </li>-->
           <li>
             <div class="col-sm-6">
               <div class="card bg-dark border-light mb-3">
