@@ -19,13 +19,13 @@ from django.urls import include, path
 from layout.urls import urlpatterns as layout_urls
 from snowfishapp.urls import urlpatterns as snowfishapp_urls
 from tour.urls import urlpatterns as tour_urls
-from news.urls import urlpatterns as news_urls
+from blog.urls import urlpatterns as blog_urls
 
 
 urlpatterns = [
     path('', include(layout_urls)),
     path('', include(snowfishapp_urls)),
     path('tour/', include(tour_urls)),
-    path('news/', include(news_urls)),
+    path('blog/', include(blog_urls)),
     path('admin/', admin.site.urls),
 ]
