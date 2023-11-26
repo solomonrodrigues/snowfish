@@ -15,7 +15,6 @@ body, html {
     background-size: 100% auto;
     margin: 0;
     padding: 0;
-    padding-top: 0 !important;
     height: 100%;
     min-height: auto;
     overflow-x: hidden; /* This prevents horizontal scrolling */
@@ -46,19 +45,13 @@ p {
     }
 }
 
-/*.bg-nav {*/
-/*    background-color: #191c1f;*/
-/*}*/
-
 [role="banner"] {
-    background: #191f29; /*#1a1827;*/
     background: var(--main-gray);
     overflow: hidden;
     margin: 0;
     padding: 10px 0 6px;
     position: relative;
     z-index: 0;
-    /*text-transform: uppercase;*/
     height: 70px;
 }
 
@@ -66,8 +59,6 @@ p {
     background: url(../img/snowfish-logo-white.svg) 0 0 no-repeat;
     display: block;
     float: left;
-    /*font-weight: 700;*/
-    /*margin: 0px;*/ /*10px;*/
     overflow: hidden;
     text-decoration: none;
     text-indent: 100%;
@@ -89,15 +80,12 @@ p {
     height: 140px;
     background: transparent;
     overflow: hidden;
-    margin: 0;
     padding: 1rem;
     z-index: 0;
     text-transform: uppercase;
     text-align: center;
-    /*temp*/
-    background: #191f29;
     background: var(--main-gray);
-    margin-top: 70px;
+    margin: 70px 0 0;
 }
 
 .bg-dark-navy {
@@ -108,7 +96,6 @@ p {
     font-size: 0.9rem;
     display: block;
     padding: 0.5rem 1rem;
-    color: var(--main-red);
     color: white;
     text-decoration: none;
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -151,10 +138,10 @@ a.nav-link:focus {
 .shine-overlay {
   position: relative;
   overflow: hidden;
+}
 
-  &:hover .shine {
-    display: block;
-  }
+.shine-overlay:hover .shine {
+  display: block;
 }
 
 .shine {
@@ -304,7 +291,7 @@ a.nav-link:focus {
 
 /* VIDEOS */
 .responsive-iframe {
-  width: 230px
+  width: 230px;
   height: 157px;
   margin: 4px;
 }
@@ -352,7 +339,7 @@ a.nav-link:focus {
   position: absolute;
   width: 100%;
   z-index: 3;
-  text-color: white;
+  color: white;
   font-family: "FreeMono", monospace;
 }
 
@@ -474,7 +461,7 @@ a.nav-link:focus {
     float: left;
   }
   .header li a {
-    padding: none;
+    padding: 0;
   }
   .header .menu {
     clear: none;
@@ -577,7 +564,7 @@ a.nav-link:focus {
   right: 0;
   bottom: 0;
   background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  text-shadow: -3px -3px 0 #F8F005, 3px 3px 0 #00E6F6;
   clip-path: var(--slice-0);
 }
 
