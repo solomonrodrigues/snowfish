@@ -128,15 +128,24 @@ a.nav-link:focus {
     display: block;
     float: left;
     overflow: hidden;
-    width: 380px;
-    height: 380px;
+    width: 20vh;
+    height: 20vh;
     background-size: contain;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
 }
 
-.the-monster-upstairs:hover {
-    cursor: pointer;
-    outline: solid 3px white;
+@media only screen and (min-width: 768px){
+    .the-monster-upstairs {
+        width: 30vh;
+        height: 30vh;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .the-monster-upstairs {
+        width: 40vh;
+        height: 40vh;
+    }
 }
 
 .jumbotron {
