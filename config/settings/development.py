@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = True
 SERVE_MEDIA = DEBUG
-WSGI_APPLICATION = 'config.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.app'
 
 # DATABASES = {
 #     'default': {
@@ -21,10 +21,10 @@ INTERNAL_IPS = ['127.0.0.1']
 #     'debug_toolbar',
 # ]
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://0.0.0.0:3000',
-]
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+#     'http://0.0.0.0:3000',
+# ]
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
