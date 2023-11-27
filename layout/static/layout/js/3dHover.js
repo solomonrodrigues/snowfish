@@ -28,7 +28,7 @@ function handleMove(e) {
   const xRotation = -50 * ((yVal - el.clientHeight / 2) / el.clientHeight)
 
   /* Generate string for CSS transform property */
-  const string = 'perspective(500px) scale(1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
+  const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
 
   /* Apply the calculated transformation with a smooth transition */
   el.style.transition = 'transform 0.1s ease-out'
