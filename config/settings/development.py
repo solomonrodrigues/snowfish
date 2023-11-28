@@ -2,7 +2,7 @@ from .base import *
 
 DEBUG = True
 SERVE_MEDIA = DEBUG
-WSGI_APPLICATION = 'config.wsgi.app'
+# WSGI_APPLICATION = 'config.wsgi.app'
 
 # DATABASES = {
 #     'default': {
@@ -15,7 +15,7 @@ WSGI_APPLICATION = 'config.wsgi.app'
 #     }
 # }
 
-ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = ['127.0.0.1']
 # INSTALLED_APPS += [
 #     'debug_toolbar',
