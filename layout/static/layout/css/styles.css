@@ -460,9 +460,6 @@ a.nav-link:focus {
   .header li {
     float: left;
   }
-  .header li a {
-    padding: 0;
-  }
   .header .menu {
     clear: none;
     float: right;
