@@ -2,7 +2,8 @@ from .base import *
 
 DEBUG = True
 SERVE_MEDIA = DEBUG
-# WSGI_APPLICATION = 'config.wsgi.app'
+WSGI_APPLICATION = 'config.wsgi.app'
+ROOT_URLCONF = 'config.urls'
 
 # DATABASES = {
 #     'default': {
@@ -16,6 +17,12 @@ SERVE_MEDIA = DEBUG
 # }
 
 # ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    '[::1]',
+    '.vercel.app'
+]
 INTERNAL_IPS = ['127.0.0.1']
 # INSTALLED_APPS += [
 #     'debug_toolbar',
