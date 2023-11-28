@@ -51,6 +51,6 @@ Thumbs.db
 # Exclude layout/static/layout/img/gallery
 layout/static/layout/img/gallery/*
 
-# Exclude layout/static/layout/img/releases except for the_monster_upstairs.png
+# Exclude layout/static/layout/img/releases except for the_monster_upstairs.webp
 layout/static/layout/img/releases/*
-!layout/static/layout/img/releases/the_monster_upstairs.png
+!layout/static/layout/img/releases/the_monster_upstairs.webp
