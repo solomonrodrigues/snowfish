@@ -22,6 +22,6 @@ urlpatterns = [
     path('', include('layout.urls')),
     path('', include('snowfishapp.urls')),
     path('tour/', include('tour.urls')),
-    path('blog/', include('blog.urls')),
-    path('admin/', admin.site.urls),
+    # path('blog/', include('blog.urls')),
+    # path('admin/', admin.site.urls),
 ]

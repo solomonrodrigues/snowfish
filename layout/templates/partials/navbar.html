@@ -3,7 +3,6 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu me-lg-5">
-        <li><a href="{% url 'blog' %}" class="{% if '/blog/' in request.path %}active{% endif %} glitch-button">Blog</a></li>
         <li><a href="{% url 'tour' %}" class="{% if '/tour/' in request.path %}active{% endif %} glitch-button">Tour</a></li>
         <li><a href="{% url 'videos' %}" class="{% if '/videos/' in request.path %}active{% endif %} glitch-button">Videos</a></li>
         <li><a href="{% url 'music' %}" class="{% if '/music/' in request.path %}active{% endif %} glitch-button">Music</a></li>

@@ -1,9 +1,9 @@
 from django.urls import path
 
 from . import views
-from .views import TourDates, TourDate
+from .views import TourDatesView, TourDateView
 
 urlpatterns = [
-    path("", TourDates.as_view(), name="tour"),
-    path("date/<slug:slug>", TourDate.as_view(), name="tour-date"),
+    path("", TourDatesView.as_view(), name="tour"),
+    # path("date/<slug:slug>", TourDateView.as_view(), name="tour-date"),
 ]
