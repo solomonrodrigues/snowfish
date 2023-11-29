@@ -18,7 +18,7 @@ SERVE_MEDIA = DEBUG
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'chargermate',
         'USER': 'postgres',
         'PASSWORD': '',
@@ -63,3 +63,5 @@ LOCKDOWN_URL_EXCEPTIONS = [
 # )
 
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
+
+SETTINGS_NAME = 'PRODUCTION.PY'

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views.generic import TemplateView
+from django.conf import settings
 
 
 # Create your views here.
@@ -11,3 +12,9 @@ def index(request):
 
 class Home(TemplateView):
     template_name = 'home.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['settings_name'] = settings.SETTINGS_NAME
+        return context
+

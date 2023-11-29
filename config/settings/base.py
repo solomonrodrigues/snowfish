@@ -93,14 +93,14 @@ WSGI_APPLICATION = 'config.wsgi.app'
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'snowfishdb',
 #     }
 # }
 
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'ENGINE': 'django.db.backends.postgresql',
 #         'NAME': 'snowfishdb',
 #         'USER': 'postgres',
 #         'PASSWORD': 'password',
@@ -108,6 +108,17 @@ WSGI_APPLICATION = 'config.wsgi.app'
 #         'PORT': '5432',
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DATABASE'),
+        'USER': os.environ.get('POSTGRES_USER'),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
+        'HOST': os.environ.get('POSTGRES_HOST'),
+        'PORT': '5432',  # Adjust the port if necessary
+    }
+}
 
 
 # Password validation
@@ -151,3 +162,5 @@ STATIC_ROOT = BASE_DIR / 'layout' / 'static'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SETTINGS_NAME = 'BASE.PY'
