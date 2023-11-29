@@ -11,7 +11,7 @@ class TourDatesView(ListView):
     ordering = ['-date']
 
     def get_queryset(self):
-        return super().get_queryset().order_by(self.ordering)
+        return super().get_queryset().order_by(*self.ordering)
 
 
 class TourDateView(DetailView):
