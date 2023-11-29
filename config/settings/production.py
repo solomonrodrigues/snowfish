@@ -48,7 +48,7 @@ MIDDLEWARE += [
     'lockdown.middleware.LockdownMiddleware',
 ]
 
-LOCKDOWN_ENABLED = True
+LOCKDOWN_ENABLED = False
 LOCKDOWN_PASSWORDS = ('2023novapumpkin2023',)
 LOCKDOWN_AUTHFORM_STAFF_ONLY = False
 LOCKDOWN_URL_EXCEPTIONS = [
