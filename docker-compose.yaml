@@ -50,10 +50,10 @@ services: # the different images that will be running as containers
 
 # access credentials from the .env file
     environment:
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_DB=${DB_NAME}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - DB_DB=${POSTGRES_DATABASE}
       - DB_PORT=${DB_PORT}
-      - DB_USER=${DB_USER}
+      - POSTGRES_USER=${POSTGRES_USER}
 
     restart: "on-failure"
 
