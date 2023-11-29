@@ -92,9 +92,13 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 
 # will be notified of 500 errors by email.
-ADMINS = ['solomonrodrigues@hotmail.com']
+ADMINS = [
+    ("Solomon Rodrigues", "solomonrodrigues@hotmail.com")
+]
 
 # will be notified of 404 errors. IGNORABLE_404_URLS can help filter out spurious reports.
-MANAGERS = ['solomonrodrigues@hotmail.com']
+MANAGERS = [
+    ("Solomon Rodrigues", "solomonrodrigues@hotmail.com")
+]
 
 IGNORABLE_404_URLS = []
