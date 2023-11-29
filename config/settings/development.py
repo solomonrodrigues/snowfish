@@ -5,16 +5,16 @@ SERVE_MEDIA = DEBUG
 WSGI_APPLICATION = 'config.wsgi.app'
 ROOT_URLCONF = 'config.urls'
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.environ.get('POSTGRES_DATABASE', 'snowfishdb'),
-#         'USER': os.environ.get('POSTGRES_USER', ''),
-#         'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
-#         'HOST': os.environ.get('POSTGRES_HOST', ''),
-#         'PORT': os.environ.get('DB_PORT', ''),
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.environ.get('POSTGRES_DATABASE', 'snowfishdb'),
+        'USER': os.environ.get('POSTGRES_USER', ''),
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
+        'HOST': os.environ.get('POSTGRES_HOST', ''),
+        'PORT': os.environ.get('POSTGRES_PORT', ''),
+    }
+}
 
 # ALLOWED_HOSTS = ['*']
 ALLOWED_HOSTS = [
@@ -37,3 +37,5 @@ STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 SETTINGS_NAME = 'DEVELOPMENT.PY'
+
+DEVELOPMENT_USED = 'DEVELOPMENT_USED'

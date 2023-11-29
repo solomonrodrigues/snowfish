@@ -116,7 +116,7 @@ DATABASES = {
         'USER': os.environ.get('POSTGRES_USER'),
         'PASSWORD': os.environ.get('POSTGRES_PASSWORD'),
         'HOST': os.environ.get('POSTGRES_HOST'),
-        'PORT': '5432',  # Adjust the port if necessary
+        'PORT': '5432',  # USE AS DEFAULT PORT
     }
 }
 
@@ -164,3 +164,5 @@ STATIC_ROOT = BASE_DIR / 'layout' / 'static'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 SETTINGS_NAME = 'BASE.PY'
+
+BASE_USED = 'BASE_USED'
