@@ -12,12 +12,3 @@ def index(request):
 
 class Home(TemplateView):
     template_name = 'home.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['settings_name'] = settings.SETTINGS_NAME
-        context['base_used'] = settings.BASE_USED
-        context['development_used'] = settings.DEVELOPMENT_USED
-        context['production_used'] = settings.PRODUCTION_USED
-        return context
-

@@ -35,7 +35,3 @@ INTERNAL_IPS = ['127.0.0.1']
 
 STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
-
-SETTINGS_NAME = 'DEVELOPMENT.PY'
-
-DEVELOPMENT_USED = 'DEVELOPMENT_USED'

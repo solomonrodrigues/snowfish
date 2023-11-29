@@ -162,7 +162,3 @@ STATIC_ROOT = BASE_DIR / 'layout' / 'static'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-SETTINGS_NAME = 'BASE.PY'
-
-BASE_USED = 'BASE_USED'
