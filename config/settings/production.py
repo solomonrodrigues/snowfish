@@ -7,10 +7,6 @@ import environ
 # env = environ.Env()
 # environ.Env.read_env(os.path.join(SETTINGS_DIR, '.env_staging'))
 
-ADMINS = [
-  #  ("Snowfish Admins", "snowfishband@gmail.com.au"),
-]
-
 SECRET_KEY = "s1et6#@d_^ebw9aq83t2@kpmox9s6c=#%6(ywx-k9+6ex6=##h"
 
 DEBUG = False
@@ -94,3 +90,11 @@ SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 # If True, the SecurityMiddleware adds the preload directive to the HTTP Strict Transport Security header.
 # It has no effect unless SECURE_HSTS_SECONDS is set to a non-zero value.
 SECURE_HSTS_PRELOAD = True
+
+# will be notified of 500 errors by email.
+ADMINS = ['solomonrodrigues@hotmail.com']
+
+# will be notified of 404 errors. IGNORABLE_404_URLS can help filter out spurious reports.
+MANAGERS = ['solomonrodrigues@hotmail.com']
+
+IGNORABLE_404_URLS = []
