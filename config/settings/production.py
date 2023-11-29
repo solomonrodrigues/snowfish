@@ -114,5 +114,5 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 
 # Whitenoise settings
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

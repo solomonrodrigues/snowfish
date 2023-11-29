@@ -1,21 +1,23 @@
 #!/bin/bash
 
 # Set the log file path
-LOG_FILE="$(dirname "${BASH_SOURCE[0]}")/build.log"
+#LOG_FILE="$(dirname "${BASH_SOURCE[0]}")/build.log"
 
 # Redirect all output to the log file
-exec > >(tee -i "$LOG_FILE")
-exec 2>&1
+#exec > >(tee -i "$LOG_FILE")
+#exec 2>&1
 
 # Print a timestamp to the log
-echo "Build started: $(date)"
+#echo "Build started: $(date)"
 
 # Install dependencies
 pip install -r requirements.txt
+
+python3.9 manage.py collectstatic
 
 # Make migrations
 python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 
 # Print a timestamp to the log
-echo "Build completed: $(date)"
+#echo "Build completed: $(date)"
