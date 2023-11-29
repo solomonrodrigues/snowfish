@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import TourDate
 
@@ -11,21 +10,23 @@ class TourDatesView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        # context['tour_dates'] = self.get_queryset().order_by('-date')
-        context['tour_dates'] = [
-            {
-                'date': '2/12/23',
-                'city': 'Newcastle',
-                'country': 'AU',
-                'venue': 'The Stag and Hunter',
-            },
-            {
-                'date': '13/12/23',
-                'city': 'Newcastle',
-                'country': 'AU',
-                'venue': 'Hamilton Station Hotel',
-            },
-        ]
+        if TourDate.objects.exists():
+            context['tour_dates'] = self.get_queryset().order_by('-date')
+        else:
+            context['tour_dates'] = [
+                {
+                    'date': '2/12/23',
+                    'city': 'Newcastle',
+                    'country': 'AU',
+                    'venue': 'The Stag and Hunter',
+                },
+                {
+                    'date': '13/12/23',
+                    'city': 'Newcastle',
+                    'country': 'AU',
+                    'venue': 'Hamilton Station Hotel',
+                },
+            ]
         return context
 
 
