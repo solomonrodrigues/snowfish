@@ -103,8 +103,8 @@ MANAGERS = [
 
 IGNORABLE_404_URLS = []
 
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = ('static',)
+STATICFILES_DIRS = (BASE_DIR / 'layout' / 'static',)
