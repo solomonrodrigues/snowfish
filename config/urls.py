@@ -16,16 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from layout.urls import urlpatterns as layout_urls
-from snowfishapp.urls import urlpatterns as snowfishapp_urls
-from tour.urls import urlpatterns as tour_urls
-from blog.urls import urlpatterns as blog_urls
 
 
 urlpatterns = [
-    path('', include(layout_urls)),
-    path('', include(snowfishapp_urls)),
-    path('tour/', include(tour_urls)),
-    path('blog/', include(blog_urls)),
-    path('admin/', admin.site.urls),
+    path('', include('layout.urls')),
+    path('', include('snowfishapp.urls')),
+    path('tour/', include('tour.urls')),
+    # path('blog/', include('blog.urls')),
+    # path('admin/', admin.site.urls),
 ]

@@ -230,6 +230,14 @@ a.nav-link:focus {
     margin-left: 15px;
 }
 
+.footer-social a {
+    transition: filter 0.3s ease-in-out;
+}
+
+.footer-social a:hover {
+    filter: invert(100%);
+}
+
 .footer-text {
     font-family: "IBM Plex Sans", sans-serif;
     font-weight: 100;
