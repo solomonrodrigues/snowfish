@@ -4,8 +4,8 @@ from .base import *
 import environ
 # from sentry_sdk.integrations.django import DjangoIntegration
 
-env = environ.Env()
-environ.Env.read_env(os.path.join(SETTINGS_DIR, '.env_staging'))
+# env = environ.Env()
+# environ.Env.read_env(os.path.join(SETTINGS_DIR, '.env_staging'))
 
 ADMINS = [
   #  ("Snowfish Admins", "snowfishband@gmail.com.au"),
@@ -86,3 +86,11 @@ SESSION_COOKIE_SECURE = True
 # Whether to use a secure cookie for the CSRF cookie. If this is set to True, the cookie will be marked as “secure”,
 # which means browsers may ensure that the cookie is only sent with an HTTPS connection.
 CSRF_COOKIE_SECURE = True
+
+# If True, the SecurityMiddleware adds the includeSubDomains directive to the HTTP Strict Transport Security header.
+# It has no effect unless SECURE_HSTS_SECONDS is set to a non-zero value.
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+# If True, the SecurityMiddleware adds the preload directive to the HTTP Strict Transport Security header.
+# It has no effect unless SECURE_HSTS_SECONDS is set to a non-zero value.
+SECURE_HSTS_PRELOAD = True
