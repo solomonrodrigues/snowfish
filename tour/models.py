@@ -7,18 +7,16 @@ from django.utils.text import slugify
 
 
 class TourDate(models.Model):
-    slug = models.SlugField(null=True, blank=True, unique=True, help_text="This will automatically generate.")
     date = models.DateField()
-    start_time = models.TimeField(null=True, blank=True)
-    title = models.CharField(max_length=100, null=True, blank=True)
-    description = models.TextField(null=True, blank=True)
-    country = models.CharField(max_length=100, default='Australia')
-    city = models.CharField(max_length=100)
+    start_time = models.TimeField(null=True, blank=True, help_text="Optional")
+    title = models.CharField(max_length=100, null=True, blank=True, help_text="e.g. Snowfish Kills the Cambo, Headliner with Snowfish")
     venue = models.CharField(max_length=200)
-    ticket_url = models.URLField(null=True, blank=True)
-    supports = models.CharField(max_length=200, null=True, blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    image = models.ImageField(upload_to='tour_images/', null=True, blank=True)
+    city = models.CharField(max_length=100, default='Newcastle')
+    country = models.CharField(max_length=100, default='Australia')
+    ticket_url = models.URLField(null=True, blank=True, help_text="Optional")
+    supports = models.CharField(max_length=200, null=True, blank=True, help_text="Optional")
+    description = models.TextField(null=True, blank=True, help_text="Optional")
+    slug = models.SlugField(null=True, blank=True, unique=True, help_text="Leave empty. This will automatically generate.")
 
     def __str__(self):
         return self.title

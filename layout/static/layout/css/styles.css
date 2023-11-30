@@ -332,12 +332,27 @@ a.nav-link:focus {
     color: white !important;
     outline: solid 2px white;
     border-radius: 1rem;
+    margin: 4px;
 }
 
 .btn--primary:hover,
 .btn--primary:focus,
 .btn--primary:active {
-    background: mediumblue;
+    background: royalblue;
+}
+
+.btn--secondary {
+    background: transparent;
+    color: white !important;
+    outline: solid 2px white;
+    border-radius: 1rem;
+    margin: 4px;
+}
+
+.btn--secondary:hover,
+.btn--secondary:focus,
+.btn--secondary:active {
+    background: lightslategray;
 }
 
 /* header */

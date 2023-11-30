@@ -12,16 +12,16 @@
     <div class="p-lg-5 p-4 col-lg-10 col-12">
 
       <nav>
-          <a href="{% url 'tour' %}">< Tour Dates</a>
+          <a class="btn btn--secondary" href="{% url 'tour' %}">< Tour Dates</a>
       </nav>
 
-      <h1 class="text-left">{{ tourdate.title }}</h1>
+      <h1 class="text-left mt-3">{{ tourdate.title|upper }}</h1>
 
       <div class="mt-5">
         <div class="col-sm-6">
           <div class="card bg-dark border-light mb-3">
             <div class="card-header">
-              <h5 class="card-title my-1">{{ tourdate.city }}, {{ tourdate.country }} - {{ tourdate.date }}</h5>
+              <h5 class="card-title my-1">{{ tourdate.city }}, {{ tourdate.country }} - {{ tourdate.date|date:"M d, Y" }}</h5>
             </div>
             <div class="card-body">
 <!--              <p class="card-text">{{ tourdate.city }}, {{ tourdate.country }}</p>-->
@@ -35,9 +35,6 @@
               {% endif %}
               {% if tourdate.ticket_url %}
                 <a class="btn btn-primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
-              {% endif %}
-              {% if tourdate.image %}
-                <img src="{{ tourdate.image.url }}" alt="{{ tourdate.title }}" class="img-fluid">
               {% endif %}
             </div>
           </div>
