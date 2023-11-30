@@ -328,7 +328,7 @@ a.nav-link:focus {
 
 /* BUTTONS */
 .btn--primary {
-    background: transparent;
+    background: royalblue;
     color: white !important;
     outline: solid 2px white;
     border-radius: 1rem;
@@ -338,7 +338,7 @@ a.nav-link:focus {
 .btn--primary:hover,
 .btn--primary:focus,
 .btn--primary:active {
-    background: royalblue;
+    background: dodgerblue;
 }
 
 .btn--secondary {

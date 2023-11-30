@@ -20,7 +20,7 @@
             <div class="col-sm-6">
               <div class="card bg-dark border-light mb-3">
                 <div class="card-header">
-                  <h5 class="card-title my-1">{% if date.title %}{{ date.title }}{% else %}{{ date.venue }}{% endif %},  {{ date.date|date:"M d, Y" }}</h5>
+                  <h5 class="card-title my-1">{% if date.title %}{{ date.title }}{% else %}{{ date.venue }}{% endif %},  {{ date.date|date:"M d, Y" }} {% if date.free_entry %}<span class="badge bg-success">Free Entry</span>{% endif %}</h5>
                 </div>
                 <div class="card-body">
                   <p class="card-text text-light">{{ date.venue }}</p>
