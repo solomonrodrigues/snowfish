@@ -2,23 +2,34 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        {% block title %}
-            <title>Snowfish Official Website</title>
-        {% endblock title %}
-        <meta charset="UTF-8">
-        <meta name="description" content="The official Snowfish website. Featuring our blog, videos, music, upcoming events, and merchandise.">
-        <meta name="author" content="Solomon Rodrigues">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="{% static 'layout/css/styles.css' %}"/>
-        <link rel="apple-touch-icon" sizes="180x180" href="{% static 'layout/favicon_io/apple-touch-icon.png' %}">
-        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'layout/favicon_io/favicon-32x32.png' %}">
-        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'layout/favicon_io/favicon-16x16.png' %}">
-        <link rel="manifest" href="{% static 'layout/favicon_io/site.webmanifest' %}">
-        {% block head_scripts %}
-        {% endblock head_scripts %}
-    </head>
+<head>
+    {% block title %}
+        <title>Snowfish Official Website</title>
+    {% endblock title %}
+    <meta charset="UTF-8">
+    <meta name="description" content="The official Snowfish website. Featuring our blog, videos, music, upcoming events, and merchandise.">
+    <meta name="author" content="Solomon Rodrigues">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'layout/css/styles.css' %}">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'layout/favicon_io/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'layout/favicon_io/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'layout/favicon_io/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'layout/favicon_io/site.webmanifest' %}">
+
+    {% block head_scripts %}
+    {% endblock head_scripts %}
+</head>
+
 
     <body>
         <div class="wrapper"> <!-- do we need these? wrapper, content-page, content?? -->
