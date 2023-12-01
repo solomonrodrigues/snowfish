@@ -16,8 +16,6 @@ pip install -r requirements.txt
 python3.9 manage.py collectstatic
 
 # Make migrations
-python3.9 manage.py migrate tour zero
-python3.9 manage.py migrate blog zero
 python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 
