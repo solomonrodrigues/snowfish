@@ -1,8 +1,8 @@
 from .base import *
 
-# import sentry_sdk
+import sentry_sdk
 import environ
-# from sentry_sdk.integrations.django import DjangoIntegration
+from sentry_sdk.integrations.django import DjangoIntegration
 
 # env = environ.Env()
 # environ.Env.read_env(os.path.join(SETTINGS_DIR, '.env_staging'))
@@ -48,7 +48,7 @@ MIDDLEWARE += [
     'lockdown.middleware.LockdownMiddleware',
 ]
 
-LOCKDOWN_ENABLED = True
+LOCKDOWN_ENABLED = False
 LOCKDOWN_PASSWORDS = ('2023novapumpkin2023',)
 LOCKDOWN_AUTHFORM_STAFF_ONLY = False
 LOCKDOWN_URL_EXCEPTIONS = [
@@ -57,11 +57,11 @@ LOCKDOWN_URL_EXCEPTIONS = [
 ]
 
 # Sentry initialization.
-# sentry_sdk.init(
-#     dsn="https://3dad7bc2764e4d33a268191bb366853e@o140791.ingest.sentry.io/4505559065821184",
-#     environment="staging",
-#     integrations=[DjangoIntegration()]
-# )
+sentry_sdk.init(
+    dsn="https://811d34389310d960d39dab8c12a4a73f@o4506320558555136.ingest.sentry.io/4506320560586752",
+    environment="prod",
+    integrations=[DjangoIntegration()]
+)
 
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
