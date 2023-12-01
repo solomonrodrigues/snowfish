@@ -23,12 +23,13 @@ python3.9 manage.py migrate
 superuser_username="$DJANGO_SUPERUSER_USERNAME"
 
 # Check if superuser with the specified username already exists
-if ! python3.9 manage.py shell -c "from django.contrib.auth.models import User; print(User.objects.filter(username='$superuser_username').exists())" 2>/dev/null; then
+if python3.9 manage.py shell -c "from django.contrib.auth.models import User; print(User.objects.filter(username='$superuser_username').exists())" 2>/dev/null; then
+    echo "Superuser with specified username already exists"
+else
     python3.9 manage.py createsuperuser --noinput --username="$superuser_username"
     echo "Superuser created"
-else
-    echo "Superuser with specified username already exists"
 fi
+
 
 # Print a timestamp to the log
 #echo "Build completed: $(date)"
