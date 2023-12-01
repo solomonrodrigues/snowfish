@@ -25,3 +25,6 @@ urlpatterns = [
     path('blog/', include('blog.urls')),
     path('admin-arcanine-lucario-goodra/', admin.site.urls),
 ]
+
+handler404 = 'layout.views.handle_404'
+handler500 = 'layout.views.handle_500'

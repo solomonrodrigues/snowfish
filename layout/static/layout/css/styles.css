@@ -421,6 +421,7 @@ a.nav-link:focus {
   padding: 28px 20px;
   position: relative;
   user-select: none;
+  margin-top: 0.25rem;
 }
 
 .header .menu-icon .navicon {
@@ -638,5 +639,87 @@ a.nav-link:focus {
   100% {
     clip-path: var(--slice-1);
     transform: translate(0);
+  }
+}
+
+/*Fixed height carousel*/
+.carousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height:80vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel .carousel-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Fixed height carousel */
+.carousel .carousel-item img {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel .carousel-item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive styles for different screen sizes */
+@media (max-width: 479.98px) {
+  /* Smallest devices */
+  .carousel .carousel-item img {
+    height: 20vh; /* Adjust the height as needed */
+  }
+}
+
+@media (max-width: 575.98px) {
+  /* Extra small devices (portrait phones) */
+  .carousel .carousel-item img {
+    height: 35vh; /* Adjust the height as needed */
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Small devices (landscape phones) */
+  .carousel .carousel-item img {
+    height: 45vh; /* Adjust the height as needed */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Medium devices (tablets) */
+  .carousel .carousel-item img {
+    height: 50vh; /* Adjust the height as needed */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Large devices (desktops) */
+  .carousel .carousel-item img {
+    height: 80vh; /* Adjust the height as needed */
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Larger desktops */
+  .carousel .carousel-item img {
+    height: 90vh; /* Adjust the height as needed */
   }
 }

@@ -16,6 +16,7 @@ pip install -r requirements.txt
 python3.9 manage.py collectstatic
 
 # Make migrations
+python3.9 manage.py migrate zero
 python3.9 manage.py makemigrations
 python3.9 manage.py migrate
 

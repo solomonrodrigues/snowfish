@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<body>
+    <div class="wrapper">
+        <div class="content-page">
+
+            {% include 'partials/navbar.html' %}
+
+            <main class="content">
+            {% block content %}
+            {% endblock content %}
+            </main>
+
+            {% include 'partials/footer.html' %}
+
+            {% block body_scripts %}
+            {% endblock body_scripts %}
+        </div>
+    </div>
+
+    {% block javascript %}
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+    {% endblock %}
+    {% block extra_javascript %}
+    {% endblock %}
+</body>
+
+{% endblock %}
