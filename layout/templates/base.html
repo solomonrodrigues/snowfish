@@ -3,9 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% block title %}
-        <title>Snowfish Official Website</title>
-    {% endblock title %}
+    <title>{% block title %}Snowfish Official Website{% endblock %}</title>
     <meta charset="UTF-8">
     <meta name="description" content="The official Snowfish website. Explore our blog, watch videos, listen to music, check out upcoming events, and shop our merchandise.">
     <meta name="author" content="Solomon Rodrigues">
@@ -18,7 +16,7 @@
     <meta property="og:title" content="{% block og_title %}Snowfish Official Website{% endblock %}" />
     <meta property="og:description" content="{% block og_description %}The official Snowfish website. Explore our blog, watch videos, listen to music, check out upcoming events, and shop our merchandise.{% endblock %}" />
     <meta property="og:image" content="{% block og_image %}https://www.snowfish.com.au/static/layout/img/og-snowfish.webp{% endblock %}" />
-    <meta property="og:url" content="https://www.snowfish.com.au/" />
+    <meta property="og:url" content="https://www.snowfish.com.au{{ request.path }}" />
     <meta property="og:type" content="website" />
 
     <!--structured data using JSON-LD.-->

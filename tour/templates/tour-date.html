@@ -1,9 +1,8 @@
 {% extends 'fullbase.html' %}
 {% load static %}
 
-{% block title %}
-    <title>Snowfish | Tour Date</title>
-{% endblock title %}
+{% block title %}Snowfish | Tour{% endblock %}
+{% block og-title %}Snowfish | Tour{% endblock %}
 
 {% block content %}
 
@@ -34,7 +33,7 @@
                 <p class="card-text">Supports: {{ tourdate.supports }}</p>
               {% endif %}
               {% if tourdate.ticket_url %}
-                <a class="btn btn-primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
+                <a class="btn btn--primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
               {% endif %}
             </div>
           </div>
