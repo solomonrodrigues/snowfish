@@ -20,20 +20,21 @@
         <div class="col-sm-6">
           <div class="card bg-dark border-light mb-3">
             <div class="card-header">
-              <h5 class="card-title my-1">{{ tourdate.city }}, {{ tourdate.country }} - {{ tourdate.date|date:"M d, Y" }}</h5>
+              <h5 class="card-title my-1">{{ tourdate.venue }}, {{ tourdate.date|date:"M d, Y" }}</h5>
             </div>
             <div class="card-body">
-<!--              <p class="card-text">{{ tourdate.city }}, {{ tourdate.country }}</p>-->
-              <p class="card-text text-secondary">{{ tourdate.venue }}</p>
-              <p class="card-text">{{ tourdate.description }}</p>
+              <p class="card-text text-secondary my-2">{{ tourdate.city }}, {{ tourdate.country }}</p>
+              <p class="card-text my-2">{{ tourdate.description }}</p>
               {% if tourdate.start_time %}
-                <p class="card-text">Start Time: {{ tourdate.start_time }}</p>
+                <p class="card-text my-2">Start Time: {{ tourdate.start_time }}</p>
               {% endif %}
               {% if tourdate.supports %}
-                <p class="card-text">Supports: {{ tourdate.supports }}</p>
+                <p class="card-text my-2">Supports: {{ tourdate.supports }}</p>
               {% endif %}
               {% if tourdate.ticket_url %}
-                <a class="btn btn--primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
+                <div class="d-flex justify-content-end align-items-center">
+                    <a class="btn btn--primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
+                </div>
               {% endif %}
             </div>
           </div>
