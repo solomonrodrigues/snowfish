@@ -1,5 +1,6 @@
 from django.views.generic import ListView, DetailView
 from .models import TourDate
+from django.utils import timezone
 
 # Create your views here.
 
@@ -11,7 +12,8 @@ class TourDatesView(ListView):
     ordering = ['date']
 
     def get_queryset(self):
-        return super().get_queryset().order_by(*self.ordering)
+        # Filter out dates that are before today
+        return super().get_queryset().filter(date__gte=timezone.now().date()).order_by(*self.ordering)
 
 
 class TourDateView(DetailView):

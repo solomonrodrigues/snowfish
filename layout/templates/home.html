@@ -7,7 +7,7 @@
     <div class="jumbo-image"></div>
 </div>
 
-<section class="d-flex justify-content-center mt-5" aria-label="The Monster Upstairs">
+<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="The Monster Upstairs">
   <div id="tilt" class="shine-overlay">
       <div class="the-monster-upstairs"></div>
       <div class="shine"></div>
@@ -22,7 +22,7 @@
   </div>
 </section>
 
-<section class="d-flex justify-content-center mt-5" aria-label="About">
+<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="About">
   <div class="col-10 col-lg-6 align-items-center">
     <div class="row">
       <h2>ABOUT</h2>
@@ -40,7 +40,38 @@
   </div>
 </section>
 
-<section class="d-flex justify-content-center mt-5" aria-label="Spotify">
+<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="Tour">
+  <div class="col-10 col-lg-6 align-items-center">
+    <h2>UPCOMING TOUR DATES</h2>
+    {% if upcoming_dates %}
+      <table class="table">
+        <tbody>
+          {% for tour_date in upcoming_dates %}
+            <tr>
+              <td>{{ tour_date.date|date:"j F Y" }}</td>
+              <td>{{ tour_date.venue|default:"N/A" }}</td>
+              <td>{{ tour_date.city|default:"N/A" }}, {{ tour_date.country|default:"N/A" }}</td>
+              <td>
+                {% if tour_date.ticket_url %}
+                  <a class="btn btn--primary" href="{{ tour_date.ticket_url }}" target="_blank">Buy Tickets</a>
+                {% elif date.slug %}
+                  <a class="btn btn--secondary" href="{% url 'tour-date' date.slug %}">View</a>
+                {% endif %}
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <div class="text-center">
+        <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
+      </div>
+    {% else %}
+      <p class="text-center">No upcoming tour dates available.</p>
+    {% endif %}
+  </div>
+</section>
+
+<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="Spotify">
   <div class="col-10 col-lg-6 align-items-center">
   <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0NDdFWfIaf38Lrq3KAPADJ?utm_source=generator" width="100%" height="465" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   </div>
