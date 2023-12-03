@@ -358,6 +358,13 @@ a.nav-link:focus {
     background: lightslategray;
 }
 
+.btn--table {
+    margin: 0;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+    line-height: 0.75;
+}
+
 /* header */
 
 .header {

@@ -53,9 +53,9 @@
               <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
               <td>
                 {% if date.ticket_url %}
-                  <a class="btn btn--primary" href="{{ date.ticket_url }}" target="_blank">Buy Tickets</a>
+                  <a class="btn btn--primary btn--table" href="{{ date.ticket_url }}" target="_blank">Buy Tickets</a>
                 {% elif date.slug %}
-                  <a class="btn btn--secondary" href="{% url 'tour-date' date.slug %}">View</a>
+                  <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
                 {% endif %}
               </td>
             </tr>
