@@ -257,6 +257,10 @@ a.nav-link:focus {
     display: block;
 }
 
+.copyright-text {
+    color: dimgray;
+}
+
 /* Media query for screens with a maximum width of 600 pixels */
 @media screen and (max-width: 600px) {
     .social-icon {

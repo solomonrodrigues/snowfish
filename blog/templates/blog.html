@@ -25,7 +25,6 @@
                   {% for paragraph in post.paragraphs.all %}
                     <p class="card-text">{{ paragraph.text }}<br><br></p>
                   {% endfor %}
-                  <img src="{{ post.image.url }}" alt="{{ post.title }}" class="d-block">
                   <div class="d-flex justify-content-end align-items-center">
                     <p class="card-text text-secondary">{{ post.timestamp }}</p>
                   </div>
