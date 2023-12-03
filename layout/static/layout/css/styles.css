@@ -325,14 +325,6 @@ a.nav-link:focus {
     text-align: center;
 }
 
-/*.retail-links a {
-    background: green;
-}
-
-.retail-links a:hover {
-    background: lime;
-}*/
-
 /* BUTTONS */
 .btn--primary {
     background: royalblue;
