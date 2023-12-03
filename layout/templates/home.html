@@ -48,7 +48,7 @@
         <tbody class="text-light">
           {% for date in upcoming_dates %}
             <tr>
-              <td>{{ date.date|date:"j F Y" }}</td>
+              <td>{{ date.date|date:"j M Y" }}</td>
               <td>{{ date.venue|default:"N/A" }}</td>
               <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
               <td>
