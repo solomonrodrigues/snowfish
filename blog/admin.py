@@ -11,13 +11,8 @@ class ParagraphInline(admin.TabularInline):
 
 class BlogPostAdmin(admin.ModelAdmin):
     model = BlogPost
-    list_display = ['id', 'title', "timestamp", "has_image", "paragraph_count"]
+    list_display = ['id', 'title', "timestamp", "paragraph_count"]
     inlines = [ParagraphInline]
-
-    def has_image(self, obj):
-        return obj.image is not None
-    has_image.boolean = True
-    has_image.short_description = 'Has Image'
 
     def paragraph_count(self, obj):
         return obj.paragraphs.count()
