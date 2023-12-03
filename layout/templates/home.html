@@ -52,9 +52,7 @@
               <td>{{ date.venue|default:"N/A" }}</td>
               <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
               <td>
-                {% if date.ticket_url %}
-                  <a class="btn btn--primary btn--table" href="{{ date.ticket_url }}" target="_blank">Buy Tickets</a>
-                {% elif date.slug %}
+                {% if date.slug %}
                   <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
                 {% endif %}
               </td>
