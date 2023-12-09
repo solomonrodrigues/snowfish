@@ -25,6 +25,23 @@ ALLOWED_HOSTS = [
 
 CSRF_TRUSTED_ORIGINS = ['https://snowfish.com.au']
 
+# Lockdown settings
+INSTALLED_APPS += [
+    'lockdown',
+]
+
+MIDDLEWARE += [
+    'lockdown.middleware.LockdownMiddleware',
+]
+
+LOCKDOWN_ENABLED = False
+LOCKDOWN_PASSWORDS = ('2023novapumpkin2023',)
+LOCKDOWN_AUTHFORM_STAFF_ONLY = False
+LOCKDOWN_URL_EXCEPTIONS = [
+    r'^/static/*',   # unlock /static/*
+    r'^/robots.txt$',
+]
+
 # Sentry initialization.
 sentry_sdk.init(
     dsn="https://811d34389310d960d39dab8c12a4a73f@o4506320558555136.ingest.sentry.io/4506320560586752",
