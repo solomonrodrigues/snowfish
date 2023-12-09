@@ -1,11 +1,7 @@
 from .base import *
 
 import sentry_sdk
-import environ
 from sentry_sdk.integrations.django import DjangoIntegration
-
-# env = environ.Env()
-# environ.Env.read_env(os.path.join(SETTINGS_DIR, '.env_staging'))
 
 SECRET_KEY = "s1et6#@d_^ebw9aq83t2@kpmox9s6c=#%6(ywx-k9+6ex6=##h"
 
