@@ -1,15 +1,3 @@
-#!/bin/bash
-
-# Set the log file path
-#LOG_FILE="$(dirname "${BASH_SOURCE[0]}")/build.log"
-
-# Redirect all output to the log file
-#exec > >(tee -i "$LOG_FILE")
-#exec 2>&1
-
-# Print a timestamp to the log
-#echo "Build started: $(date)"
-
 # Install dependencies
 pip install -r requirements.txt
 
@@ -31,7 +19,3 @@ if python3.9 manage.py shell -c "from django.contrib.auth.models import User; pr
 else
     echo "Superuser with specified username already exists"
 fi
-
-
-# Print a timestamp to the log
-#echo "Build completed: $(date)"
