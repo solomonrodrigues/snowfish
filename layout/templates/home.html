@@ -3,20 +3,36 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <div class="jumbo-image"></div>
-</div>
+<!--<div class="jumbotron">-->
+<!--    <div class="jumbo-image"></div>-->
+<!--</div>-->
+
+  <div class="hero-section">
+    <div class="halftone-pattern"></div>
+    <div class="hero-content">
+<pre id="snowfishArt" class="tiny">
+ ##################     ######        ######      ###############       ######         #####    ####################    ####################     ##################     ######        ######
+####################    ######        ######     ##################     #######       ######    ####################    ####################    ####################    ######        ######
+####################    ######        ######    ####################    #######       ######    ####################    ####################    ####################    ######        ######
+######                  ########      ######    ######        ######    #######  ###  ######    #######                       ########          ######                  ######        ######
+######                  ###########   ######    ######        ######    ####### ##### ######    #######                       ########          ######                  ######        ######
+###################     ####################    ######        ######    ####################    ################              ########          ###################     ####################
+####################    ######   ###########    ######        ######    ####################    ################              ########          ####################    ####################
+ ###################    ######      ########    ######        ######     ##################     #######                       ########           ###################    ####################
+             #######    ######       #######    ######        ######     ##################     #######                       ########                       #######    ######        ######
+####################    ######        ######    ####################      ######    ######      #######                 ####################    ####################    ######        ######
+####################    ######        ######     ##################       #####      #####      #######                 ####################    ####################    ######        ######
+ ##################     ######        ######      ################         ###        ###       #######                 ####################     ##################     ######        ######
+</pre>
+    </div>
+  </div>
 
 <section class="mt-5 mb-lg-2" aria-label="The Monster Upstairs">
   <div class="d-flex align-items-center justify-content-center mt-lg-3">
     <div class="col-10 col-lg-8 d-flex justify-content-between">
-      <div id="tilt" class="d-flex shine-overlay">
-          <div class="the-monster-upstairs"></div>
-          <div class="shine"></div>
-      </div>
       <div class="col-6 d-flex flex-column align-items-center justify-content-center mt-lg-3">
         <div class="text-center">
-          <h2 class="text-center">THE MONSTER UPSTAIRS</h2>
+          <h1 class="text-center">The Monster Upstairs</h1>
           <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" class="btn d-none d-sm-flex justify-content-sm-center">
               <button class="custom-button" role="button"><span class="text">Out Now</span></button>
           </a>
@@ -24,6 +40,10 @@
               <button class="custom-button" role="button"><span class="text">Buy Vinyl</span></button>
           </a>
         </div>
+      </div>
+      <div id="tilt" class="d-flex shine-overlay">
+        <div class="the-monster-upstairs"></div>
+        <div class="shine"></div>
       </div>
     </div>
   </div>
@@ -37,40 +57,46 @@
   </div>
 </section>
 
-<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="Tour">
-  <div class="col-10 col-lg-6 align-items-center">
-    <h2 class="text-center">UPCOMING TOUR DATES</h2>
-    {% if upcoming_dates %}
-      <table class="table">
-        <tbody class="text-light">
-          {% for date in upcoming_dates %}
-            <tr>
-              <td>{{ date.date|date:"j M Y" }}</td>
-              <td>{{ date.venue|default:"N/A" }}</td>
-              <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
-              <td>
-                {% if date.slug %}
-                  <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
-                {% endif %}
-              </td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-      <div class="text-center">
-        <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
+<div class="d-flex justify-content-center">
+  <div class="row col-10">
+    <section class="col-lg-8 d-flex justify-content-center mt-5 mb-lg-2" aria-label="Tour">
+      <div class="col-10 align-items-center card bg-secondary-gray">
+        <div class="card-body">
+          <h2 class="text-center">Upcoming Tour Dates</h2>
+          {% if upcoming_dates %}
+            <table class="table">
+              <tbody class="text-light">
+                {% for date in upcoming_dates %}
+                  <tr>
+                    <td>{{ date.date|date:"j M Y" }}</td>
+                    <td>{{ date.venue|default:"N/A" }}</td>
+                    <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
+                    <td>
+                      {% if date.slug %}
+                        <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            <div class="text-center">
+              <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
+            </div>
+          {% else %}
+            <p class="text-center">No upcoming tour dates available.</p>
+          {% endif %}
+        </div>
       </div>
-    {% else %}
-      <p class="text-center">No upcoming tour dates available.</p>
-    {% endif %}
-  </div>
-</section>
+    </section>
 
-<section class="d-flex justify-content-center mt-5 mb-lg-2" aria-label="Spotify">
-  <div class="col-10 col-lg-6 align-items-center">
-  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0NDdFWfIaf38Lrq3KAPADJ?utm_source=generator" width="100%" height="465" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <section class="col-lg-4 d-flex justify-content-center mt-5 mb-lg-2" aria-label="Spotify">
+      <div class="col-10 align-items-center">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0NDdFWfIaf38Lrq3KAPADJ?utm_source=generator" width="100%" height="465" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+    </section>
   </div>
-</section>
+</div>
 
 <section class="d-flex justify-content-center mt-5" aria-label="YouTube">
   <div class="col-10 col-lg-6 align-items-center">
@@ -83,5 +109,34 @@
 {% endblock %}
 
 {% block extra_javascript %}
-  <script type="text/javascript" src="{% static 'layout/js/3dHover.js' %}"></script>
+<script type="text/javascript" src="{% static 'layout/js/3dHover.js' %}"></script>
+<script>
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+[{]}|;:,<.>/?';
+
+    function getRandomCharacter() {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        return characters[randomIndex];
+    }
+
+    function updateSnowfishArt() {
+        const snowfishArt = document.getElementById('snowfishArt');
+        const lines = snowfishArt.innerText.trim().split('\n');
+
+        const updatedLines = lines.map(line => {
+            let updatedLine = '';
+            for (const char of line) {
+                if (char === ' ' || char === '$t') {
+                    updatedLine += char;
+                } else {
+                    updatedLine += getRandomCharacter();
+                }
+            }
+            return updatedLine;
+        });
+
+        snowfishArt.innerText = updatedLines.join('\n');
+    }
+
+    setInterval(updateSnowfishArt, 100);
+</script>
 {% endblock %}

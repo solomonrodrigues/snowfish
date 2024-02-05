@@ -4,6 +4,7 @@
   --main-gray: #282828;
   --main-green: #00ff00;
   --off-black: #08090d;
+  --secondary-gray: #0c0c14;
 }
 
 body, html {
@@ -22,7 +23,7 @@ body, html {
 }
 
 h1, h2, h3 {
-    font-family: "Georgia", serif;
+    font-family: "Arial", sans-serif;/*"Georgia", serif;*/
     font-weight: 700;
 }
 
@@ -45,6 +46,36 @@ p {
         font-size: 20px;
     }
 }
+
+    .hero-section {
+      position: relative;
+      height: 80vh;
+      background-color: #222; /* Background color for the hero section */
+      color: #fff; /* Text color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .halftone-pattern {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url(../img/jumbo.jpg); /* Replace 'halftone-pattern.png' with your halftone pattern image */
+      opacity: 0.3; /* Adjust the opacity as needed */
+      z-index: 1;
+      background-size: cover;
+    }
+
+    .hero-content {
+      z-index: 1;
+    }
+
+    .tiny {
+        font-size: 12px;
+    }
 
 [role="banner"] {
     background: var(--main-gray);
@@ -92,6 +123,10 @@ p {
 
 .bg-dark-navy {
     background-color: #0a0f17 !important;
+}
+
+.bg-secondary-gray {
+    background: var(--secondary-gray);
 }
 
 .nav-link {
