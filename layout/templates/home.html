@@ -10,20 +10,31 @@
   <div class="hero-section">
     <div class="halftone-pattern"></div>
     <div class="hero-content">
-<pre id="snowfishArt" class="tiny">
- ##################     ######        ######      ###############       ######         #####    ####################    ####################     ##################     ######        ######
-####################    ######        ######     ##################     #######       ######    ####################    ####################    ####################    ######        ######
-####################    ######        ######    ####################    #######       ######    ####################    ####################    ####################    ######        ######
-######                  ########      ######    ######        ######    #######  ###  ######    #######                       ########          ######                  ######        ######
-######                  ###########   ######    ######        ######    ####### ##### ######    #######                       ########          ######                  ######        ######
-###################     ####################    ######        ######    ####################    ################              ########          ###################     ####################
-####################    ######   ###########    ######        ######    ####################    ################              ########          ####################    ####################
- ###################    ######      ########    ######        ######     ##################     #######                       ########           ###################    ####################
-             #######    ######       #######    ######        ######     ##################     #######                       ########                       #######    ######        ######
-####################    ######        ######    ####################      ######    ######      #######                 ####################    ####################    ######        ######
-####################    ######        ######     ##################       #####      #####      #######                 ####################    ####################    ######        ######
- ##################     ######        ######      ################         ###        ###       #######                 ####################     ##################     ######        ######
+<pre id="snowfishArt" class="tiny d-none d-lg-block">
+ ##################     ######        ######      ###############       ######         #####    ####################    ################     ##################     ######        ######
+####################    ######        ######     ##################     #######       ######    ####################    ################    ####################    ######        ######
+####################    ######        ######    ####################    #######       ######    ####################    ################    ####################    ######        ######
+######                  ########      ######    ######        ######    #######  ###  ######    #######                     ########        ######                  ######        ######
+######                  ###########   ######    ######        ######    ####### ##### ######    #######                     ########        ######                  ####################
+###################     ####################    ######        ######    ####################    ################            ########        ###################     ####################
+####################    ######   ###########    ######        ######    ####################    ################            ########        ####################    ####################
+ ###################    ######      ########    ######        ######     ##################     #######                     ########         ###################    ######        ######
+             #######    ######       #######    ######        ######     ##################     #######                     ########                     #######    ######        ######
+####################    ######        ######    ####################      ######    ######      #######                 ################    ####################    ######        ######
+####################    ######        ######     ##################       #####      #####      #######                 ################    ####################    ######        ######
+ ##################     ######        ######      ################         ###        ###       #######                 ################     ##################     ######        ######
 </pre>
+<pre id="snowfishArtSmall" class="tiny d-lg-none d-block">
+  ______    __    __    ______    __       __   ________   ______    ______    __    __
+ /      \  /  \  /  |  /      \  /  |  _  /  | /        | /      |  /      \  /  |  /  |
+/$$$$$$  | $$  \ $$ | /$$$$$$  | $$ | / \ $$ | $$$$$$$$/  $$$$$$/  /$$$$$$  | $$ |  $$ |
+$$ \__$$/  $$$  \$$ | $$ |  $$ | $$ |/$  \$$ | $$ |__       $$ |   $$ \__$$/  $$ |__$$ |
+$$      \  $$$$  $$ | $$ |  $$ | $$ /$$$  $$ | $$    |      $$ |   $$      \  $$    $$ |
+ $$$$$$  | $$ $$ $$ | $$ |  $$ | $$ $$/$$ $$ | $$$$$/       $$ |    $$$$$$  | $$$$$$$$ |
+/  \__$$ | $$ |$$$$ | $$ \__$$ | $$$$/  $$$$ | $$ |        _$$ |_  /  \__$$ | $$ |  $$ |
+$$    $$/  $$ | $$$ | $$    $$/  $$$/    $$$ | $$ |       / $$   | $$    $$/  $$ |  $$ |
+ $$$$$$/   $$/   $$/   $$$$$$/   $$/      $$/  $$/        $$$$$$/   $$$$$$/   $$/   $$/
+    </pre>
     </div>
   </div>
 
@@ -57,54 +68,58 @@
   </div>
 </section>
 
-<div class="d-flex justify-content-center">
+<section class="mt-5 mb-lg-2 row justify-content-center" aria-label="Tour">
+  <div class="col-10 card bg-secondary-gray">
+    <div class="card-body mh-250px">
+      <h2 class="text-center">Upcoming Tour Dates</h2>
+      {% if upcoming_dates %}
+        <table class="table">
+          <tbody class="text-light">
+            {% for date in upcoming_dates %}
+              <tr>
+                <td>{{ date.date|date:"j M Y" }}</td>
+                <td>{{ date.venue|default:"N/A" }}</td>
+                <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
+                <td>
+                  {% if date.slug %}
+                    <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <div class="text-center">
+          <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
+        </div>
+      {% else %}
+        <div class="d-flex justify-content-center align-items-center h-50">
+            <p>No upcoming tour dates available.</p>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<div class="d-flex justify-content-center mt-5 mb-lg-2">
   <div class="row col-10">
-    <section class="col-lg-8 d-flex justify-content-center mt-5 mb-lg-2" aria-label="Tour">
-      <div class="col-10 align-items-center card bg-secondary-gray">
-        <div class="card-body">
-          <h2 class="text-center">Upcoming Tour Dates</h2>
-          {% if upcoming_dates %}
-            <table class="table">
-              <tbody class="text-light">
-                {% for date in upcoming_dates %}
-                  <tr>
-                    <td>{{ date.date|date:"j M Y" }}</td>
-                    <td>{{ date.venue|default:"N/A" }}</td>
-                    <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
-                    <td>
-                      {% if date.slug %}
-                        <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
-                      {% endif %}
-                    </td>
-                  </tr>
-                {% endfor %}
-              </tbody>
-            </table>
-            <div class="text-center">
-              <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
-            </div>
-          {% else %}
-            <p class="text-center">No upcoming tour dates available.</p>
-          {% endif %}
+
+    <section class="col-lg-8 d-flex justify-content-center" aria-label="YouTube">
+      <div class="col-12 align-items-center">
+        <div class="yt-iframe-container">
+          <iframe class="yt-responsive-iframe" src="https://www.youtube.com/embed/6-_9ubnJlRo?si=jRq0mcUte3td80qJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
     </section>
 
-    <section class="col-lg-4 d-flex justify-content-center mt-5 mb-lg-2" aria-label="Spotify">
-      <div class="col-10 align-items-center">
-        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0NDdFWfIaf38Lrq3KAPADJ?utm_source=generator" width="100%" height="465" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <section class="col-lg-4 d-flex justify-content-center" aria-label="Spotify">
+      <div class="col-12 align-items-center">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/0NDdFWfIaf38Lrq3KAPADJ?utm_source=generator" width="100%" height="100%" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
       </div>
     </section>
+
   </div>
 </div>
-
-<section class="d-flex justify-content-center mt-5" aria-label="YouTube">
-  <div class="col-10 col-lg-6 align-items-center">
-    <div class="yt-iframe-container">
-      <iframe class="yt-responsive-iframe" src="https://www.youtube.com/embed/6-_9ubnJlRo?si=jRq0mcUte3td80qJ" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-    </div>
-  </div>
-</section>
 
 {% endblock %}
 

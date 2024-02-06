@@ -5,6 +5,7 @@
   --main-green: #00ff00;
   --off-black: #08090d;
   --secondary-gray: #0c0c14;
+  --sans: "Arial", sans-serif;
 }
 
 body, html {
@@ -22,9 +23,16 @@ body, html {
     overflow-x: hidden; /* This prevents horizontal scrolling */
 }
 
-h1, h2, h3 {
-    font-family: "Arial", sans-serif;/*"Georgia", serif;*/
-    font-weight: 700;
+h1 {
+    font-family: var(--sans);
+    letter-spacing: -.02em;
+    -webkit-font-smoothing: antialiased;
+}
+
+h2, h3 {
+    font-family: var(--sans);
+    letter-spacing: -.01em;
+    -webkit-font-smoothing: antialiased;
 }
 
 p {
@@ -47,35 +55,39 @@ p {
     }
 }
 
-    .hero-section {
-      position: relative;
-      height: 80vh;
-      background-color: #222; /* Background color for the hero section */
-      color: #fff; /* Text color */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
+.hero-section {
+  position: relative;
+  height: 80vh;
+  background-color: #222; /* Background color for the hero section */
+  color: #fff; /* Text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
 
-    .halftone-pattern {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url(../img/jumbo.jpg); /* Replace 'halftone-pattern.png' with your halftone pattern image */
-      opacity: 0.3; /* Adjust the opacity as needed */
-      z-index: 1;
-      background-size: cover;
-    }
+.halftone-pattern {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../img/jumbo.jpg); /* Replace 'halftone-pattern.png' with your halftone pattern image */
+  opacity: 0.3; /* Adjust the opacity as needed */
+  z-index: 1;
+  background-size: cover;
+}
 
-    .hero-content {
-      z-index: 1;
-    }
+.hero-content {
+  z-index: 1;
+}
 
-    .tiny {
-        font-size: 12px;
-    }
+.tiny {
+    font-size: 12px;
+}
+
+.mh-250px {
+    min-height: 250px;
+}
 
 [role="banner"] {
     background: var(--main-gray);
