@@ -11,7 +11,8 @@
     --main-purple: #bc8cff;
 
     --button-colour: 125 145 120;
-    --theme-colour: #7d8f78;;
+    --theme-colour: #7d8f78;
+    --theme-colour-dark: #475245;
 
     --spacing-0-5: 0.125rem;
     --spacing-1: 0.25rem;
@@ -238,12 +239,16 @@ p {
 .hero-content {
   z-index: 1;
   height: 100%;
-  /*display: flex;*/
-  /*align-items: end;*/
 }
 
 .tiny {
-    font-size: 12px;
+    font-size: 6px;
+}
+
+@media only screen and (min-width: 768px){
+    .tiny {
+        font-size: 12px;
+    }
 }
 
 .mh-250px {
@@ -703,7 +708,7 @@ a.nav-link:focus {
 .header li a:hover,
 .header .menu-btn:hover,
 .header li a.active:hover {
-  background-color: var(--main-red);
+  background-color: var(--theme-colour);
   color: white;
 }
 
@@ -902,7 +907,7 @@ a.nav-link:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, var(--theme-colour-dark) 5%);
   text-shadow: -3px -3px 0 #F8F005, 3px 3px 0 #00E6F6;
   clip-path: var(--slice-0);
 }
