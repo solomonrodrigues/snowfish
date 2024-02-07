@@ -10,7 +10,7 @@
     --not-quite-black: #23272a;
     --main-purple: #bc8cff;
     /*--button-red: #e91429;*/
-    --button-red: 233 20 41;
+    --button-red: 255 30 0;
 
     --spacing-0-5: 0.125rem;
     --spacing-1: 0.25rem;
@@ -437,7 +437,7 @@ a.nav-link:focus {
 }
 
 .footer-social a:hover {
-    filter: invert(100%);
+    filter: invert(70%);
 }
 
 .footer-text {
@@ -453,25 +453,14 @@ a.nav-link:focus {
 }
 
 .social-icon {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     background-size: contain !important;
     display: block;
 }
 
 .copyright-text {
     color: dimgray;
-}
-
-/* Media query for screens with a maximum width of 600 pixels */
-@media screen and (max-width: 600px) {
-    .social-icon {
-        width: 20px; /* Adjust the width to your preference */
-        height: 20px; /* Use a percentage for the height to maintain aspect ratio */
-    }
-    .youtube {
-        height: 13px;
-    }
 }
 
 .instagram {
@@ -488,7 +477,8 @@ a.nav-link:focus {
 
 .youtube {
     background: url(../img/social/youtube.png) 0 0 no-repeat;
-    height: 20px;
+    height: 30px;
+    width: 45px;
 }
 
 .tiktok {
@@ -501,6 +491,18 @@ a.nav-link:focus {
 
 .apple-music {
     background: url(../img/social/apple-music.svg) 0 0 no-repeat;
+}
+
+/* Media query for screens with a maximum width of 600 pixels */
+@media screen and (max-width: 600px) {
+    .social-icon {
+        width: 20px; /* Adjust the width to your preference */
+        height: 20px; /* Use a percentage for the height to maintain aspect ratio */
+    }
+    .youtube {
+        height: 16px;
+        width: 24px;
+    }
 }
 
 /* VIDEOS */
@@ -593,6 +595,7 @@ a.nav-link:focus {
   display: inline-block;
   position: relative;
   border: 0;
+  text-transform: capitalize;
 }
 
 .button:hover, .btn:hover,
@@ -656,7 +659,7 @@ a.nav-link:focus {
 .button--outline:active {
   color: rgb(var(--button-text-color));
   background-color: rgb(var(--button-background));
-  box-shadow: inset 0 0 0 2px;
+  box-shadow: inset 0 0 0 2px var(--button-outline-color);
 }
 
 /* header */
