@@ -9,8 +9,9 @@
     --sans: "ABCGintoNormal-Bold", sans-serif;
     --not-quite-black: #23272a;
     --main-purple: #bc8cff;
-    /*--button-red: #e91429;*/
-    --button-red: 255 30 0;
+
+    --button-colour: 125 145 120;
+    --theme-colour: #7d8f78;;
 
     --spacing-0-5: 0.125rem;
     --spacing-1: 0.25rem;
@@ -94,7 +95,7 @@
     --background-primary: 14 14 14;
     --dialog-background: 14 14 14;
     --border-color: var(--text-color, var(--text-primary)) / 0.12;
-    --button-background-primary: var(--button-red); /*255 110 0;*/
+    --button-background-primary: var(--button-colour);
     --button-text-primary: 14 14 14;
     --button-background-secondary: 255 110 0;
     --button-text-secondary: 14 14 14;
@@ -179,12 +180,16 @@ h1 {
     font-family: var(--sans);
     letter-spacing: -.02em;
     -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 h2, h3 {
     font-family: var(--sans);
     letter-spacing: -.01em;
     -webkit-font-smoothing: antialiased;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 p {
@@ -224,7 +229,7 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url(../img/jumbo.jpg); /* Replace 'halftone-pattern.png' with your halftone pattern image */
+  background: url(../img/cowards.webp); /* Replace 'halftone-pattern.png' with your halftone pattern image */
   opacity: 0.3; /* Adjust the opacity as needed */
   z-index: 1;
   background-size: cover;
@@ -232,6 +237,9 @@ p {
 
 .hero-content {
   z-index: 1;
+  height: 100%;
+  /*display: flex;*/
+  /*align-items: end;*/
 }
 
 .tiny {
@@ -595,7 +603,9 @@ a.nav-link:focus {
   display: inline-block;
   position: relative;
   border: 0;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 .button:hover, .btn:hover,
@@ -986,6 +996,15 @@ a.nav-link:focus {
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.release-date {
+    padding-bottom: 10px;
+}
+
+.text-themed {
+    color: var(--theme-colour);
+    text-transform: uppercase;
 }
 
 /* Responsive styles for different screen sizes */
