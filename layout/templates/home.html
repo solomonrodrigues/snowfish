@@ -5,27 +5,14 @@
 
 <div class="hero-section">
 <div class="halftone-pattern"></div>
-<div class="hero-content d-flex flex-column justify-content-end py-4">
+<div class="hero-content d-flex flex-column justify-content-end py-4 w-100">
   <div class="d-flex flex-grow-1">
-    <div class="row justify-content-center align-items-center">
-      <pre id="snowfishArt" class="tiny">
-   ##################     ######        ######        ############        ######         #####    ####################    ################     ##################     ######        ######
-  ####################    ######        ######     ##################     #######       ######    ####################    ################    ####################    ######        ######
-  ####################    ######        ######    ####################    #######       ######    ####################    ################    ####################    ######        ######
-  ######                  ########      ######    #######      #######    #######  ###  ######    #######                     ########        ######                  ######        ######
-  ######                  ###########   ######    ######        ######    ####### ##### ######    #######                     ########        ######                  ####################
-       ###################     ####################    #####          #####    ####################    ################            ########        ###################     ####################
-       ####################    ######   ###########    #####          #####    ####################    ################            ########        ####################    ####################
-         ###################    ######      ########    ######        ######     ##################     #######                     ########         ###################    ######        ######
-               #######    ######       #######    #######      #######     ##################     #######                     ########                     #######    ######        ######
-  ####################    ######        ######    ####################      ######    ######      #######                 ################    ####################    ######        ######
-####################    ######        ######     ##################       #####      #####      #######                 ################    ####################    ######        ######
- ##################     ######        ######        ############           ###        ###       #######                 ################     ##################     ######        ######
-      </pre>
+    <div class="row justify-content-center align-items-center flex-grow-1">
+      <div data-letter-crap='{% static "layout/img/snowfish-logo-bw.png" %}' style='width: 95%;' data-lettercrap-aspect-ratio='0.175' data-lettercrap-words='snowfish SNOWFISH'></div>
     </div>
   </div>
   <div class="row">
-    <div class="text-start">
+    <div class="text-start ms-5 mb-4">
       <p class="text-themed">Coming Soon</p>
       <h1>COWARDS</h1>
       <a href="#" class="button button--outline">Pre-save</a>
@@ -39,8 +26,8 @@
     <div class="col-10 d-flex justify-content-between">
       <div class="col-6 d-flex flex-column align-items-center justify-content-center mt-lg-3">
         <div class="text-center">
-          <h1 class="text-start display-3 d-sm-block d-none">The Monster Upstairs</h1>
-          <h1 class="text-start display-6 d-block d-sm-none">The Monster Upstairs</h1>
+          <h1 class="text-start display-3 d-sm-block d-none">The Monster <span class="display-1" style="letter-spacing: 0.1em;">Upstairs</span></h1>
+          <h1 class="text-start display-6 d-block d-sm-none">The Monster <span class="display-4" style="letter-spacing: 0.1em;">Upstairs</span></h1>
 
           <div class="d-none d-sm-block text-start">
             <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" class="button button--xl">Out Now</a>
@@ -64,7 +51,7 @@
 </section>
 
 <section class="mt-5 mb-lg-2 row justify-content-center" aria-label="Tour">
-  <div class="col-10 card bg-secondary-gray">
+  <div class="col-10 card bg-secondary-gray border border--theme--dark">
     <div class="card-body mh-250px">
       <h2 class="text-start">Upcoming Tour Dates</h2>
       {% if upcoming_dates %}
@@ -120,5 +107,5 @@
 
 {% block extra_javascript %}
 <script type="text/javascript" src="{% static 'layout/js/3dHover.js' %}"></script>
-<script type="text/javascript" src="{% static 'layout/js/randomArt.js' %}"></script>
+<script type="text/javascript" src="{% static 'layout/js/lettercrap.js' %}"></script>
 {% endblock %}

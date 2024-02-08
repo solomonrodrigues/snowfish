@@ -23,7 +23,7 @@ urlpatterns = [
     path('', include('snowfishapp.urls')),
     path('tour/', include('tour.urls')),
     path('blog/', include('blog.urls')),
-    path('admin-arcanine-lucario-goodra/', admin.site.urls),
+    path('admin/', admin.site.urls),
 ]
 
 handler404 = 'layout.views.handle_404'
