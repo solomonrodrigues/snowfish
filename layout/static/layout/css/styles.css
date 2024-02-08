@@ -195,7 +195,7 @@ h2, h3 {
 
 p {
     margin: 0;
-    var(--sans);
+    font-family: Tofino,sans-serif!important;
 }
 
 .vh-50 {
