@@ -723,7 +723,8 @@ a.nav-link:focus {
 }
 
 .header li a.active {
-    color: var(--main-light-red);
+    color: var(--theme-colour);
+    text-decoration: underline;
 }
 
 .header .logo {
@@ -1063,4 +1064,9 @@ a.nav-link:focus {
   .carousel .carousel-item img {
     height: 90vh; /* Adjust the height as needed */
   }
+}
+
+/* BLOG PAGE */
+.blog-post-title {
+    text-transform: capitalize;
 }
