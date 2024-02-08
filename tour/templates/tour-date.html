@@ -11,19 +11,24 @@
     <div class="p-lg-5 p-4 col-lg-10 col-12">
 
       <nav>
-          <a class="btn btn--secondary" href="{% url 'tour' %}">< Tour Dates</a>
+          <a class="button button--md button--outline" href="{% url 'tour' %}">
+            <span class="d-flex align-items-center">
+              <span class="material-symbols-outlined">arrow_back</span>
+              Tour Dates
+            </span>
+          </a>
       </nav>
 
-      <h1 class="text-left mt-3">{{ tourdate.title|upper }}</h1>
+      <h1 class="text-left mt-3">{{ tourdate.date|date:"M d, Y" }}</h1>
 
       <div class="mt-5">
         <div class="col-sm-6">
-          <div class="card bg-dark border-light mb-3">
+          <div class="card bg-secondary-gray border border--theme mb-3">
             <div class="card-header">
-              <h5 class="card-title my-1">{{ tourdate.venue }}, {{ tourdate.date|date:"M d, Y" }}</h5>
+              <h5 class="card-title my-1">{{ tourdate.city }}, {{ tourdate.country }}</h5>
             </div>
             <div class="card-body">
-              <p class="card-text text-secondary my-2">{{ tourdate.city }}, {{ tourdate.country }}</p>
+              <p class="card-text text-secondary my-2">{{ tourdate.venue }}</p>
               <p class="card-text my-2">{{ tourdate.description }}</p>
               {% if tourdate.start_time %}
                 <p class="card-text my-2">Start Time: {{ tourdate.start_time }}</p>
@@ -33,7 +38,7 @@
               {% endif %}
               {% if tourdate.ticket_url %}
                 <div class="d-flex justify-content-end align-items-center">
-                    <a class="btn btn--primary m-2" href="{{ date.ticket_link }}" target="_blank">Tickets</a>
+                    <a class="button button--md m-2" href="{{ date.ticket_link }}">Tickets</a>
                 </div>
               {% endif %}
             </div>

@@ -9,7 +9,6 @@ from django.utils.text import slugify
 class TourDate(models.Model):
     date = models.DateField()
     start_time = models.TimeField(null=True, blank=True, help_text="Optional")
-    title = models.CharField(max_length=100, null=True, blank=True, help_text="e.g. Snowfish Kills the Cambo, Headliner with Snowfish")
     venue = models.CharField(max_length=200)
     city = models.CharField(max_length=100, default='Newcastle')
     country = models.CharField(max_length=100, default='Australia')
@@ -20,11 +19,11 @@ class TourDate(models.Model):
     slug = models.SlugField(null=True, blank=True, unique=True, help_text="Leave empty. This will automatically generate.")
 
     def __str__(self):
-        return self.title
+        return f'{self.venue}, {self.date}'
 
     def save(self, *args, **kwargs):
         # just check if name or location.name has changed
-        self.slug = '-'.join((slugify(self.title), slugify(self.date)))
+        self.slug = '-'.join((slugify(self.venue), slugify(self.date)))
         super(TourDate, self).save(*args, **kwargs)
 
     def get_absolute_url(self):

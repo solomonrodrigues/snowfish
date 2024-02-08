@@ -17,20 +17,20 @@
           {% for date in tour_dates %}
           <li>
             <div class="col-sm-6">
-              <div class="card bg-dark border-light mb-3">
+              <div class="card bg-secondary-gray border border--theme mb-3">
                 <div class="card-header">
-                  <h5 class="card-title my-1">{% if date.title %}{{ date.title }}{% else %}{{ date.venue }}{% endif %},  {{ date.date|date:"M d, Y" }} {% if date.free_entry %}<span class="badge bg-success">Free Entry</span>{% endif %}</h5>
+                  <h5 class="card-title my-1">{{ date.date|date:"M d, Y" }}<span class="float-end">{{ date.city }}, {{ date.country }}</span></h5>
                 </div>
                 <div class="card-body">
-                  <p class="card-text text-light">{{ date.venue }}</p>
-                  <p class="card-text text-secondary">{{ date.city }}, {{ date.country }}</p>
+                  <p class="card-text text-light">{{ date.venue }} {% if date.free_entry %}<span class="badge bg-success">Free Entry</span>{% endif %}</p>
+                  <p class="card-text text-secondary">w/{{ date.supports}}</p>
                   <div class="d-flex justify-content-end align-items-center">
                     <div>
                       {% if date.slug %}
-                        <a class="btn btn--secondary" href="{% url 'tour-date' date.slug %}">View</a>
+                        <a class="button button--md button--subdued" href="{% url 'tour-date' date.slug %}">View</a>
                       {% endif %}
                       {% if date.ticket_url %}
-                        <a class="btn btn--primary" href="{{ date.ticket_url }}" target="_blank">Tickets</a>
+                        <a class="button button--md" href="{{ date.ticket_url }}">Tickets</a>
                       {% endif %}
                     </div>
                   </div>

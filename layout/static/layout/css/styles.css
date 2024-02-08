@@ -5,8 +5,8 @@
     --main-green: #00ff00;
     --off-black: #08090d;
     --secondary-gray: #0c0c14;
-    --sans: "ABCGintoNormal-Bold", sans-serif;
-    --main-font: 'Archivo', sans-serif; /*--'Titillium Web', sans-serif;*/
+    --sans: "Open Sans", sans-serif;
+    --heading-font: 'Archivo', sans-serif; /*--'Titillium Web', sans-serif;*/
     --not-quite-black: #23272a;
     --main-purple: #bc8cff;
 
@@ -165,7 +165,7 @@
 body, html {
     color: #fff;
     font-size: 16px;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: var(--sans);
     background-color: var(--off-black); /*#0e1117;*/ /*black;*/ /*#0b151a;*/ /* #0a0f17 */
     line-height: 1.35;
     background-repeat: repeat;
@@ -178,7 +178,7 @@ body, html {
 }
 
 h1 {
-    font-family: var(--main-font);
+    font-family: var(--heading-font);
     letter-spacing: -.02em;
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
@@ -186,7 +186,7 @@ h1 {
 }
 
 h2, h3 {
-    font-family: var(--main-font);
+    font-family: var(--heading-font);
     letter-spacing: -.01em;
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
@@ -196,7 +196,7 @@ h2, h3 {
 
 p {
     margin: 0;
-    font-family: var(--main-font);
+    font-family: var(--sans);
 }
 
 .vh-50 {

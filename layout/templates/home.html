@@ -59,12 +59,12 @@
           <tbody class="text-light">
             {% for date in upcoming_dates %}
               <tr>
-                <td>{{ date.date|date:"j M Y" }}</td>
+                <td class="text-themed">{{ date.date|date:"j M Y" }}</td>
                 <td>{{ date.venue|default:"N/A" }}</td>
                 <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
                 <td>
                   {% if date.slug %}
-                    <a class="btn btn--secondary btn--table" href="{% url 'tour-date' date.slug %}">View</a>
+                    <a class="button button--xs button--subdued" href="{% url 'tour-date' date.slug %}">View</a>
                   {% endif %}
                 </td>
               </tr>
@@ -72,7 +72,7 @@
           </tbody>
         </table>
         <div class="text-center">
-          <a class="btn btn--primary" href="{% url 'tour' %}">See More Tour Dates</a>
+          <a class="button button--md button--outline" href="{% url 'tour' %}">See More Tour Dates</a>
         </div>
       {% else %}
         <div class="text-start h-50">
