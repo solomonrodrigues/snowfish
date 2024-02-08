@@ -298,7 +298,6 @@ p {
     z-index: 0;
     text-align: center;
     background: var(--main-gray);
-    margin: 70px 0 0;
 }
 
 .bg-dark-navy {
@@ -1069,4 +1068,27 @@ a.nav-link:focus {
 /* BLOG PAGE */
 .blog-post-title {
     text-transform: capitalize;
+}
+
+/* FOOTER WAVE */
+.footer-wave {
+    margin: 70px 0 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 51px;
+    transform: rotateY(180deg);
+}
+
+.footer-wave .shape-fill {
+    fill: #282828;
 }
