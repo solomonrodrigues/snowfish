@@ -13,7 +13,6 @@ class TourDate(models.Model):
     city = models.CharField(max_length=100, default='Newcastle')
     country = models.CharField(max_length=100, default='Australia')
     ticket_url = models.URLField(null=True, blank=True, help_text="Optional")
-    free_entry = models.BooleanField(default=False)
     supports = models.CharField(max_length=200, null=True, blank=True, help_text="Optional")
     description = models.TextField(null=True, blank=True, help_text="Optional")
     slug = models.SlugField(null=True, blank=True, unique=True, help_text="Leave empty. This will automatically generate.")

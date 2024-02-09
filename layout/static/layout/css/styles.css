@@ -455,11 +455,11 @@ a.nav-link:focus {
     margin-left: 15px;
 }
 
-.footer-social a {
+.social-icon {
     transition: filter 0.3s ease-in-out;
 }
 
-.footer-social a:hover {
+.social-icon:hover {
     filter: invert(70%);
 }
 
@@ -1127,4 +1127,17 @@ a.nav-link:focus {
 
 .about-wave .shape-fill {
     fill: #90BD89;
+}
+
+/*ZOOM ON HOVER IMG*/
+.img-wrapper {
+  overflow: hidden;
+}
+
+.inner-img {
+  transition: 0.5s;
+}
+
+.inner-img:hover {
+  transform: scale(1.1);
 }
