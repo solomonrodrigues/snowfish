@@ -207,6 +207,10 @@ a {
     color: var(--theme-colour-alt-2);
 }
 
+img {
+    border-radius: 10px;
+}
+
 .vh-50 {
     height: 50vh !important;
 }
@@ -343,6 +347,7 @@ a.nav-link:focus {
     height: 30vw;
     background-size: contain;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
+    border-radius: 10px;
 }
 
 @media only screen and (min-width: 768px){
@@ -363,6 +368,7 @@ a.nav-link:focus {
 .shine-overlay {
   position: relative;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .shine-overlay:hover .shine {
