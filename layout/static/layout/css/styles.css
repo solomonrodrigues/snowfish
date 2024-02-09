@@ -13,6 +13,9 @@
     --button-colour: 125 145 120;
     --theme-colour: #7d8f78;
     --theme-colour-dark: #475245;
+    --h1-theme-colour: #daf0ee;
+    --theme-colour-alt-1: #9db5b2;
+    --theme-colour-alt-2: #94d1be;
 
     --spacing-0-5: 0.125rem;
     --spacing-1: 0.25rem;
@@ -183,6 +186,7 @@ h1 {
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
     text-transform: uppercase;
+    color: var(--h1-theme-colour);
 }
 
 h2, h3 {
@@ -197,6 +201,10 @@ h2, h3 {
 p {
     margin: 0;
     font-family: var(--sans);
+}
+
+a {
+    color: var(--theme-colour-alt-2);
 }
 
 .vh-50 {
@@ -331,23 +339,24 @@ a.nav-link:focus {
     display: block;
     float: left;
     overflow: hidden;
-    width: 20vh;
-    height: 20vh;
+    width: 30vw;
+    height: 30vw;
     background-size: contain;
     transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
 }
 
 @media only screen and (min-width: 768px){
     .the-monster-upstairs {
-        width: 30vh;
-        height: 30vh;
+        width: 30vw;
+        height: 30vw;
+        /*height: 30vh;*/
     }
 }
 
 @media only screen and (min-width: 1200px){
     .the-monster-upstairs {
-        width: 40vh;
-        height: 40vh;
+        width:35vw;
+        height:35vw;
     }
 }
 
@@ -1022,6 +1031,10 @@ a.nav-link:focus {
     text-transform: uppercase;
 }
 
+.bg-theme {
+    background-color: var(--theme-colour);
+}
+
 /* Responsive styles for different screen sizes */
 @media (max-width: 479.98px) {
   /* Smallest devices */
@@ -1072,7 +1085,7 @@ a.nav-link:focus {
 
 /* FOOTER WAVE */
 .footer-wave {
-    margin: 70px 0 0;
+    margin: 18px 0 0;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -1091,4 +1104,27 @@ a.nav-link:focus {
 
 .footer-wave .shape-fill {
     fill: #282828;
+}
+
+/* ABOUT WAVE */
+.about-wave {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.about-wave svg {
+    position: relative;
+    display: block;
+    width: calc(170% + 1.3px);
+    height: 222px;
+    transform: rotateY(180deg);
+}
+
+.about-wave .shape-fill {
+    fill: #90BD89;
 }

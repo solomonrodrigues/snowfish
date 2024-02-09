@@ -8,7 +8,8 @@
 <div class="hero-content d-flex flex-column justify-content-end py-4 w-100">
   <div class="d-flex flex-grow-1">
     <div class="row justify-content-center align-items-center flex-grow-1">
-      <div data-letter-crap='{% static "layout/img/snowfish-logo-bw.png" %}' style='width: 95%;' data-lettercrap-aspect-ratio='0.175' data-lettercrap-words='snowfish SNOWFISH'></div>
+      <div data-letter-crap='{% static "layout/img/snowfish-logo-bw.png" %}' style='width: 95%;' data-lettercrap-aspect-ratio='0.175' data-lettercrap-words='snowfish SNOWFISH GREATESTBANDOFALL
+      TIME'></div>
     </div>
   </div>
   <div class="row">
@@ -31,7 +32,7 @@
 
           <div class="d-none d-sm-block text-start">
             <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" class="button button--xl">Out Now</a>
-            <a href="https://snowfish.bigcartel.com/product/tmu-vinyl" target="_blank" class="button button--xl">Buy Vinyl</a>
+            <a href="https://snowfish.bigcartel.com/product/tmu-vinyl" class="button button--xl">Buy Vinyl</a>
           </div>
 
         </div>
@@ -59,7 +60,7 @@
           <tbody class="text-light">
             {% for date in upcoming_dates %}
               <tr>
-                <td class="text-themed">{{ date.date|date:"j M Y" }}</td>
+                <td class="text-themed fw-bolder">{{ date.date|date:"j M Y" }}</td>
                 <td>{{ date.venue|default:"N/A" }}</td>
                 <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
                 <td>
@@ -83,7 +84,7 @@
   </div>
 </section>
 
-<div class="d-flex justify-content-center">
+<div class="d-flex justify-content-center mb-5">
   <div class="row col-10">
 
     <section class="col-lg-8 d-flex justify-content-center mt-5" aria-label="YouTube">
@@ -106,6 +107,6 @@
 {% endblock %}
 
 {% block extra_javascript %}
-<script type="text/javascript" src="{% static 'layout/js/3dHover.js' %}"></script>
+<!--<script type="text/javascript" src="{% static 'layout/js/3dHover.js' %}"></script>-->
 <script type="text/javascript" src="{% static 'layout/js/lettercrap.js' %}"></script>
 {% endblock %}
