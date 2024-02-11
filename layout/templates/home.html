@@ -51,9 +51,95 @@
 
 </section>
 
+<section class="row justify-content-center mt-5">
+  <div class="col-10">
+    <h2>Snowfish Store</h2>
+    <div class="row my-4">
+
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="img-wrapper border-radius-10">
+          <a href="https://snowfish.bigcartel.com/product/the-monster-upstairs-tee" target="_blank">
+            <div class="image-container img-wrapper">
+              <img src="{% static 'layout/img/store/tmu_tee_front.webp' %}" alt="The Monster Upstairs Tee Front" class="inner-img" height="100%" width="100%">
+              <div class="text-overlay">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <div class="text">TMU TEE</div>
+                  <svg role="presentation" focusable="false" width="24" height="24" class="icon icon-circle-button-right-clipped reverse-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12ZM10.47 9.53 12.94 12l-2.47 2.47 1.06 1.06 3-3 .53-.53-.53-.53-3-3-1.06 1.06Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="img-wrapper border-radius-10">
+          <a href="https://snowfish.bigcartel.com/product/the-monster-upstairs-tee" target="_blank">
+            <div class="image-container img-wrapper">
+              <img src="{% static 'layout/img/store/tmu_tee_back.webp' %}" alt="The Monster Upstairs Tee Back" class="inner-img" height="100%" width="100%">
+              <div class="text-overlay">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <div class="text">TMU TEE</div>
+                  <svg role="presentation" focusable="false" width="24" height="24" class="icon icon-circle-button-right-clipped reverse-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12ZM10.47 9.53 12.94 12l-2.47 2.47 1.06 1.06 3-3 .53-.53-.53-.53-3-3-1.06 1.06Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="img-wrapper border-radius-10">
+          <a href="https://snowfish.bigcartel.com/product/tmu-vinyl" target="_blank">
+            <div class="image-container img-wrapper">
+              <img src="{% static 'layout/img/store/tmu_vinyl.webp' %}" alt="The Monster Upstairs Vinyl" class="inner-img" height="100%" width="100%">
+              <div class="text-overlay">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <div class="text">TMU VINYL</div>
+                  <svg role="presentation" focusable="false" width="24" height="24" class="icon icon-circle-button-right-clipped reverse-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12ZM10.47 9.53 12.94 12l-2.47 2.47 1.06 1.06 3-3 .53-.53-.53-.53-3-3-1.06 1.06Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-6 col-md-3 mb-3 mb-md-0">
+        <div class="img-wrapper border-radius-10">
+          <a href="https://snowfish.bigcartel.com/product/ghost-tee" target="_blank">
+            <div class="image-container img-wrapper">
+              <img src="{% static 'layout/img/store/ghost_tee.webp' %}" alt="Ghost Tee" class="inner-img" height="100%" width="100%">
+              <div class="text-overlay">
+                <div class="d-flex justify-content-between align-items-center p-2">
+                  <div class="text">GHOST TEE</div>
+                  <svg role="presentation" focusable="false" width="24" height="24" class="icon icon-circle-button-right-clipped reverse-icon">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24c6.627 0 12-5.373 12-12S18.627 0 12 0 0 5.373 0 12s5.373 12 12 12ZM10.47 9.53 12.94 12l-2.47 2.47 1.06 1.06 3-3 .53-.53-.53-.53-3-3-1.06 1.06Z" fill="currentColor"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center">
+      <a href="https://snowfish.bigcartel.com/products" target="_blank" class="button button--lg button--outline">Shop</a>
+    </div>
+
+  </div>
+</section>
+
 <section class="mt-5 mb-lg-2 row justify-content-center" aria-label="Tour">
-  <div class="col-10 card bg-secondary-gray border border--theme--dark">
-    <div class="card-body mh-250px">
+  <div class="col-10">
+    <div class="mh-250px">
       <h2 class="text-start">Upcoming Tour Dates</h2>
       {% if upcoming_dates %}
         <table class="table">
@@ -65,7 +151,7 @@
                 <td>{{ date.city|default:"N/A" }}, {{ date.country|default:"N/A" }}</td>
                 <td>
                   {% if date.slug %}
-                    <a class="button button--xs button--subdued" href="{% url 'tour-date' date.slug %}">View</a>
+                    <a class="button button--sm button--subdued" href="{% url 'tour-date' date.slug %}">View</a>
                   {% endif %}
                 </td>
               </tr>
@@ -73,7 +159,7 @@
           </tbody>
         </table>
         <div class="text-center">
-          <a class="button button--md button--outline" href="{% url 'tour' %}">See More Tour Dates</a>
+          <a class="button button--lg button--outline" href="{% url 'tour' %}">See More Tour Dates</a>
         </div>
       {% else %}
         <div class="text-start h-50">

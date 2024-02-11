@@ -14,8 +14,8 @@ class Home(TemplateView):
         context = super().get_context_data(**kwargs)
         current_date = timezone.now().date()
 
-        # Query the TourDate objects, filter for the next 3 dates after the current date
-        upcoming_dates = TourDate.objects.filter(date__gte=current_date).order_by('date')[:3]
+        # Query the TourDate objects, filter for the next 10 dates after the current date
+        upcoming_dates = TourDate.objects.filter(date__gte=current_date).order_by('date')[:10]
 
         # Pass the upcoming dates to the template context
         context['upcoming_dates'] = upcoming_dates

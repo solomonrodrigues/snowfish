@@ -13,7 +13,7 @@
     --button-colour: 125 145 120;
     --theme-colour: #7d8f78;
     --theme-colour-dark: #475245;
-    --h1-theme-colour: #daf0ee;
+    --heading-theme-colour: #daf0ee;
     --theme-colour-alt-1: #9db5b2;
     --theme-colour-alt-2: #94d1be;
 
@@ -186,7 +186,7 @@ h1 {
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--h1-theme-colour);
+    color: var(--heading-theme-colour);
 }
 
 h2, h3 {
@@ -195,7 +195,7 @@ h2, h3 {
     -webkit-font-smoothing: antialiased;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--theme-colour);
+    color: var(--heading-theme-colour);
 }
 
 p {
@@ -209,6 +209,51 @@ a {
 
 img {
     border-radius: 10px;
+}
+
+.border-radius-10 {
+    border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align text and SVG horizontally */
+  align-items: flex-end; /* Align text and SVG vertically */
+  color: white;
+  opacity: 1; /* Always visible */
+}
+
+.text {
+  text-decoration: none; /* Remove text decoration */
+  color: white; /* Set text color to white */
+}
+
+.icon {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  margin-left: 8px;
+}
+
+.inner-img {
+  transition: transform 0.5s; /* Moved the transition to .inner-img */
+}
+
+.image-container:hover .inner-img {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.image-container:hover .icon {
+  opacity: 1; /* Fades in only on hover */
 }
 
 .vh-50 {
