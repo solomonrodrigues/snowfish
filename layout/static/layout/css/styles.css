@@ -452,20 +452,6 @@ a.nav-link:focus {
   }
 }
 
-.jumbotron {
-    height: 33vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.jumbo-image {
-    background: url(../img/jumbo.jpg) center center no-repeat;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-}
-
 .tour-dates-list {
     list-style: none;
     padding: 0;
