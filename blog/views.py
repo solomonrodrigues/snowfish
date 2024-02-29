@@ -11,5 +11,5 @@ class Blog(ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['blog_posts'] = self.get_queryset()
+        context['blog_posts'] = self.get_queryset().order_by('-timestamp')
         return context
