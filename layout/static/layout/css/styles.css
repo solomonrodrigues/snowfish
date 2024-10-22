@@ -489,7 +489,7 @@ a.nav-link:focus {
     min-height: calc(100vh - 210px);
     display: flex;
     flex-direction: column;
-    padding-top: 67px; /*accounting for nav bar*/
+    padding-top: 64px; /*accounting for nav bar (reduced from 67px to 64px)*/
 }
 
 .footer-contents {
