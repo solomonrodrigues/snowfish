@@ -6,7 +6,7 @@ from .models import TourDate
 
 class TourDateAdmin(admin.ModelAdmin):
     model = TourDate
-    list_display = ['id', "date", "city", "venue"]
+    list_display = ['id', "date", "city", "venue", "has_ticket_link"]
     exclude = ['slug']
 
 

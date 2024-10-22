@@ -12,6 +12,12 @@
 
       <h1 class="text-left">Tour Dates</h1>
 
+      <!-- Controls to switch between upcoming and past dates -->
+      <div class="d-flex justify-content-end">
+        <a href="?filter=upcoming" class="btn {% if not request.GET.filter or request.GET.filter == 'upcoming' %}button{% else %}button--outline{% endif %}">Upcoming</a>
+        <a href="?filter=past" class="btn {% if request.GET.filter == 'past' %}button{% else %}button--outline{% endif %} ms-2">Past</a>
+      </div>
+
       <div class="mt-5">
         <ol id="tour-dates-list" class="tour-dates-list">
           {% for date in tour_dates %}
@@ -23,7 +29,7 @@
                 </div>
                 <div class="card-body">
                   <p class="card-text text-light">{{ date.venue }}</p>
-                  {% if date.slug %}
+                  {% if date.supports %}
                     <p class="card-text text-secondary">w/{{ date.supports}}</p>
                   {% endif %}
                   <div class="d-flex justify-content-end align-items-center">
@@ -31,7 +37,7 @@
                       {% if date.slug %}
                         <a class="button button--md button--subdued" href="{% url 'tour-date' date.slug %}">View</a>
                       {% endif %}
-                      {% if date.ticket_url %}
+                      {% if date.ticket_url and show_tickets %}
                         <a class="button button--md" href="{{ date.ticket_url }}">Tickets</a>
                       {% endif %}
                     </div>
@@ -43,7 +49,11 @@
           {% empty %}
           <li>
             <div class="col-sm-6">
-              <p>No upcoming tour dates. Stay tuned for future announcements.</p>
+              {% if request.GET.filter == 'past' %}
+                <p>No past tour dates available.</p>
+              {% else %}
+                <p>No upcoming tour dates. Stay tuned for future announcements.</p>
+              {% endif %}
             </div>
           </li>
           {% endfor %}

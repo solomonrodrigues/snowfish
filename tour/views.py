@@ -12,10 +12,31 @@ class TourDatesView(ListView):
     ordering = ['date']
 
     def get_queryset(self):
-        # Filter out dates that are before today
-        return super().get_queryset().filter(date__gte=timezone.now().date()).order_by(*self.ordering)
+        queryset = super().get_queryset()
+        filter_option = self.request.GET.get('filter', 'upcoming')
+
+        if filter_option == 'past':
+            # Show past tour dates
+            return queryset.filter(date__lt=timezone.now().date()).order_by(*self.ordering)
+        else:
+            # Default to showing upcoming tour dates
+            return queryset.filter(date__gte=timezone.now().date()).order_by(*self.ordering)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Add context to show or hide ticket links
+        filter_option = self.request.GET.get('filter', 'upcoming')
+        context['show_tickets'] = (filter_option != 'past')
+        return context
 
 
 class TourDateView(DetailView):
     model = TourDate
     template_name = 'tour-date.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Check if the tour date is in the future (for single tour date view)
+        tour_date = self.object.date
+        context['show_tickets'] = tour_date >= timezone.now().date()
+        return context

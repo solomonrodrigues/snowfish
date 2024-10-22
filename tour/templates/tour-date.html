@@ -36,7 +36,7 @@
               {% if tourdate.supports %}
                 <p class="card-text my-2">Supports: {{ tourdate.supports }}</p>
               {% endif %}
-              {% if tourdate.ticket_url %}
+              {% if tourdate.ticket_url and show_tickets %}
                 <div class="d-flex justify-content-end align-items-center">
                     <a class="button button--md m-2" href="{{ tourdate.ticket_url }}">Tickets</a>
                 </div>

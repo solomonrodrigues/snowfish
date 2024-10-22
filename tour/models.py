@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from django.utils.text import slugify
+from django.contrib import admin
 
 
 # Create your models here.
@@ -27,6 +28,10 @@ class TourDate(models.Model):
 
     def get_absolute_url(self):
         return reverse("tour-date", kwargs={"slug": self.slug})
+
+    @admin.display(boolean=True)
+    def has_ticket_link(self):
+        return bool(self.ticket_url)
 
     class Meta:
         verbose_name = "Tour Date"
