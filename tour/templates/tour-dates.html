@@ -23,7 +23,9 @@
                 </div>
                 <div class="card-body">
                   <p class="card-text text-light">{{ date.venue }}</p>
-                  <p class="card-text text-secondary">w/{{ date.supports}}</p>
+                  {% if date.slug %}
+                    <p class="card-text text-secondary">w/{{ date.supports}}</p>
+                  {% endif %}
                   <div class="d-flex justify-content-end align-items-center">
                     <div>
                       {% if date.slug %}
