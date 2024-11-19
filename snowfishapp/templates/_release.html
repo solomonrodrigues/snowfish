@@ -1,0 +1,25 @@
+{% load static %}
+<div class="row release">
+  {% if forloop.counter|divisibleby:2 %}
+    <div class="packshot col-6">
+      <img src="{% static release.image %}" alt="{{ release.alt_text }}" width="80%">
+    </div>
+  {% endif %}
+  <div class="info col-6 d-flex justify-content-center flex-column">
+    <h2>{{ release.title }}</h2>
+    <div class="release-meta">
+      <div class="release-date">
+        {{ release.release_date }}
+      </div>
+    </div>
+    <div class="retail-links">
+      <a href="{{ release.link }}" target="_blank" class="button button-xl button--subdued">Listen</a>
+    </div>
+  </div>
+  {% if not forloop.counter|divisibleby:2 %}
+    <div class="packshot col-6">
+      <img src="{% static release.image %}" alt="{{ release.alt_text }}" width="80%">
+    </div>
+  {% endif %}
+</div>
+<hr>
