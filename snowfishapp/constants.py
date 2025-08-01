@@ -1,5 +1,12 @@
 RELEASES = [
     {
+        "title": "Bring Me to an End",
+        "release_date": "1 August 2025",
+        "link": "https://gyro.to/PrepareYourselfforWhatComesNext",
+        "image": "layout/img/releases/believe_in_my_love.webp",
+        "alt_text": "Bring Me to an End",
+    },
+    {
         "title": "Prepare Yourself for What Comes Next",
         "release_date": "31 December 2024",
         "link": "https://gyro.to/PrepareYourselfforWhatComesNext",

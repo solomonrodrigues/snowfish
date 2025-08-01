@@ -2,9 +2,7 @@ from django.utils import timezone
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from tour.models import TourDate
-
-
-# Create your views here.
+from snowfishapp.models import LatestRelease
 
 
 class Home(TemplateView):
@@ -19,6 +17,8 @@ class Home(TemplateView):
 
         # Pass the upcoming dates to the template context
         context['upcoming_dates'] = upcoming_dates
+
+        context['latest_release'] = LatestRelease.objects.order_by('-release_date').first()
 
         return context
 

@@ -14,9 +14,26 @@
   </div>
   <div class="row">
     <div class="text-start ms-4 ms-sm-5 mb-2 p-0">
-      <p class="text-themed-light">Coming Soon</p>
-      <h1>PREPARE YOURSELF FOR WHAT COMES NEXT</h1>
-      <a href="https://gyro.to/PrepareYourselfforWhatComesNext" target="_blank" class="button button--xl button--outline button--subdued">Listen</a>
+      <p class="text-themed-light">
+        {% if latest_release.status == 'unreleased' %}
+          COMING SOON
+        {% else %}
+          OUT NOW
+        {% endif %}
+      </p>
+
+      <h1>{{ latest_release.title }}</h1>
+
+      <a
+        href="{% if latest_release.streaming_link %}{{ latest_release.streaming_link }}{% else %}/music{% endif %}"
+        {% if latest_release.streaming_link %} target="_blank" rel="noopener noreferrer"{% endif %}
+        class="button button--xl button--outline button--subdued">
+        {% if latest_release.status == 'unreleased' %}
+          PRE-SAVE
+        {% else %}
+          LISTEN
+        {% endif %}
+      </a>
     </div>
   </div>
 </div>
