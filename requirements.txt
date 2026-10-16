@@ -1,11 +1,10 @@
-django==4.2.2
+django>=5.2,<5.3
 django-extensions
 django-environ
 django-lockdown
 django-redis
 pip-tools
 psycopg2-binary
-django-bootstrap-v5
 boto3
 Pillow
 whitenoise

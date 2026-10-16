@@ -14,7 +14,7 @@ services: # the different images that will be running as containers
       - .:/home/app/webapp
 
     ports:
-      - 8000:8000 # testing
+      - ${WEB_PORT:-8000}:8000 # testing
 
 # file where env variables are stored. Used as best practice so as not to expose secret keys
     env_file:
@@ -42,7 +42,7 @@ services: # the different images that will be running as containers
   db: # service name
 
 # image name of the postgres database. during build, this will be pulled from dockerhub and a container spun up from it.
-    image: postgres:13.0-alpine
+    image: postgres:17-alpine
 
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
