@@ -10,7 +10,7 @@ class Home(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        current_date = timezone.now().date()
+        current_date = timezone.localdate()
 
         # Query the TourDate objects, filter for the next 10 dates after the current date
         upcoming_dates = TourDate.objects.filter(date__gte=current_date).order_by('date')[:10]
