@@ -1326,12 +1326,6 @@ a.nav-link:focus {
   clip-path: inset(0 0 0 0);
 }
 
-@media (hover: hover) {
-  .store-flip:hover .store-flip-back {
-    clip-path: inset(0 0 0 0);
-  }
-}
-
 .store-flip-toggle {
   position: absolute;
   left: var(--spacing-4);
