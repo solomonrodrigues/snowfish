@@ -39,33 +39,36 @@
 </div>
 </div>
 
-<section class="mt-5 mb-lg-2" aria-label="The Monster Upstairs">
-  <div class="d-flex align-items-center justify-content-center mt-lg-3">
-    <div class="col-10 d-flex justify-content-between">
-      <div class="col-6 d-flex flex-column align-items-center justify-content-center mt-lg-3">
-        <div class="text-center">
-          <h1 class="text-start display-3 d-sm-block d-none">The Monster <span class="display-1" style="letter-spacing: 0.1em;">Upstairs</span></h1>
-          <h1 class="text-start display-6 d-block d-sm-none">The Monster <span class="display-4" style="letter-spacing: 0.1em;">Upstairs</span></h1>
+<section class="album-feature" aria-labelledby="ld-title">
+  <div class="album-cover shine-overlay">
+    <img src="{% static 'layout/img/releases/life_and_death_1200.webp' %}" alt="Life and Death album cover: people walking up a cloud bank into a teal sky" width="1200" height="1200" loading="lazy">
+    <div class="shine"></div>
+  </div>
+  <div class="album-info">
+    <h2 id="ld-title">Life and Death</h2>
+    <p class="album-date">Released 10 July 2026</p>
+    <p class="album-lede">Our new album. All five singles, plus four new songs: K.T.P, Prison Walls, Coffin Flowers and the title track.</p>
+    <div class="album-actions">
+      <a href="https://gyro.to/LifeandDeath" target="_blank" rel="noopener" class="button button--lg">Listen everywhere</a>
+    </div>
+    <iframe class="album-player" src="https://open.spotify.com/embed/album/6ObMQGo7G6Ltefa0gcyv6y?utm_source=generator&theme=0" title="Life and Death on Spotify" width="100%" height="152" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</section>
 
-          <div class="d-none d-sm-block text-start">
-            <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" class="button button--xl">Out Now</a>
-            <a href="{% url 'store' %}#tmu-vinyl" class="button button--xl">Order Vinyl</a>
-          </div>
-
-        </div>
-      </div>
-      <div id="tilt" class="d-flex shine-overlay">
-        <div class="the-monster-upstairs"></div>
-        <div class="shine"></div>
-      </div>
+<section class="album-feature album-feature--flip" aria-labelledby="tmu-title">
+  <div class="album-cover shine-overlay">
+    <img src="{% static 'layout/img/releases/the_monster_upstairs_1200.webp' %}" alt="The Monster Upstairs album cover: a lone figure walking a striped staircase around a dark square" width="1200" height="1200" loading="lazy">
+    <div class="shine"></div>
+  </div>
+  <div class="album-info">
+    <h2 id="tmu-title">The Monster Upstairs</h2>
+    <p class="album-date">Released 25 November 2022</p>
+    <p class="album-lede">Eleven tracks, including Burn From Within, Trapped and Ghost. Also on vinyl.</p>
+    <div class="album-actions">
+      <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" rel="noopener" class="button button--lg">Listen everywhere</a>
+      <a href="{% url 'store' %}#tmu-vinyl" class="button button--lg button--outline">Order the vinyl</a>
     </div>
   </div>
-
-  <div class="d-flex d-sm-none justify-content-center">
-    <a href="https://gyro.to/TheMonsterUpstairs" target="_blank" class="button button--md m-3">Out Now</a>
-    <a href="{% url 'store' %}#tmu-vinyl" class="button button--md m-3">Order Vinyl</a>
-  </div>
-
 </section>
 
 <section class="row justify-content-center mt-5">

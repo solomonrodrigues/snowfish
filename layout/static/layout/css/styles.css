@@ -404,33 +404,6 @@ a.nav-link:focus {
     transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-bottom 0.5s ease-in-out;
 }
 
-.the-monster-upstairs {
-    background: url(../img/releases/the_monster_upstairs.webp) 0 0 no-repeat;
-    display: block;
-    float: left;
-    overflow: hidden;
-    width: 30vw;
-    height: 30vw;
-    background-size: contain;
-    transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
-    border-radius: 10px;
-}
-
-@media only screen and (min-width: 768px){
-    .the-monster-upstairs {
-        width: 30vw;
-        height: 30vw;
-        /*height: 30vh;*/
-    }
-}
-
-@media only screen and (min-width: 1200px){
-    .the-monster-upstairs {
-        width:35vw;
-        height:35vw;
-    }
-}
-
 .shine-overlay {
   position: relative;
   overflow: hidden;
@@ -1430,5 +1403,83 @@ a.nav-link:focus {
 @media (prefers-reduced-motion: reduce) {
   .store-flip-back {
     transition: none;
+  }
+}
+
+/* Album features (home) */
+
+.album-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-12);
+  align-items: center;
+  width: calc(100% * 10 / 12);
+  margin: var(--spacing-24) auto;
+}
+
+.album-feature + .album-feature {
+  margin-top: 0;
+}
+
+.album-feature--flip .album-cover {
+  order: 2;
+}
+
+.album-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.album-info h2 {
+  font-size: clamp(2.5rem, 4.5vw, 4.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.album-date {
+  margin-top: var(--spacing-3);
+  color: var(--theme-colour-alt-2);
+  font-weight: 600;
+}
+
+.album-lede {
+  max-width: 44ch;
+  margin: var(--spacing-5) 0 var(--spacing-8);
+  font-size: 1.125rem;
+  color: var(--theme-colour-alt-1);
+}
+
+.album-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+}
+
+.album-player {
+  display: block;
+  margin-top: var(--spacing-8);
+  border: 0;
+  border-radius: 12px;
+  background: var(--secondary-gray);
+}
+
+.album-feature a:focus-visible {
+  outline: 2px solid var(--theme-colour-alt-2);
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .album-feature {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+    margin: var(--spacing-16) auto;
+  }
+
+  .album-feature--flip .album-cover {
+    order: 0;
   }
 }
