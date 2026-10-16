@@ -762,7 +762,7 @@ a.nav-link:focus {
   width: 100%;
   z-index: 3;
   color: white;
-  font-family: "FreeMono", monospace;
+  font-family: "FreeMono", ui-monospace, Menlo, Consolas, monospace;
 }
 
 .header ul {
@@ -789,8 +789,9 @@ a.nav-link:focus {
 }
 
 .header li a.active {
-    color: var(--theme-colour);
+    color: var(--theme-colour-alt-2);
     text-decoration: underline;
+    text-underline-offset: 6px;
 }
 
 .header .logo {
@@ -891,6 +892,18 @@ a.nav-link:focus {
   }
   .header .menu-icon {
     display: none;
+  }
+}
+
+/* Keep the desktop nav at 16px instead of growing with the 20px root size. */
+@media (min-width: 1200px) {
+  .header li a {
+    font-size: 16px;
+    padding: 22px 16px;
+  }
+  .header .glitch-button,
+  .header .glitch-button:after {
+    letter-spacing: 0.12em;
   }
 }
 
