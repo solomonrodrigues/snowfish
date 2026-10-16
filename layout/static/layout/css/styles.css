@@ -859,7 +859,7 @@ a.nav-link:focus {
 }
 
 .header .menu-btn:checked ~ .menu {
-  max-height: 500px;
+  max-height: 640px;
 }
 
 .header .menu-btn:checked ~ .menu-icon .navicon {
@@ -881,7 +881,8 @@ a.nav-link:focus {
 
 /* 48em = 768px */
 
-@media (min-width: 835px) { /*48em*/
+/* Below 1200px the eight nav items don't fit beside the logo, so use the menu button. */
+@media (min-width: 1200px) {
   .header li {
     float: left;
   }
