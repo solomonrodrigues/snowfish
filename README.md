@@ -12,6 +12,13 @@ Django 4.2.2\
 python 3.11.3\
 psycopg2
 
+## Local development
+```
+cp .env.example .env
+docker compose up -d          # WEB_PORT=8001 docker compose up -d if 8000 is taken
+docker compose exec web python manage.py migrate
+```
+
 ## Dockerization
 https://semaphoreci.com/community/tutorials/dockerizing-a-python-django-web-application \
 https://blog.logrocket.com/dockerizing-django-app/#prerequisites-for-using-docker \

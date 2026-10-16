@@ -18,7 +18,7 @@ services: # the different images that will be running as containers
 
 # file where env variables are stored. Used as best practice so as not to expose secret keys
     env_file:
-      - ./.envs/.local # name of the env file
+      - ./.env # copy from .env.example
 
 # name of the image
     image: snowfish

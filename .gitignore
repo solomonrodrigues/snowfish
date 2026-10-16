@@ -47,3 +47,9 @@ Thumbs.db
 *.flv
 *.mov
 *.wmv
+
+# Local env files and generated output
+.env
+.envs/
+staticfiles_build/
+init.sql
