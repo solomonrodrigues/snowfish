@@ -8,8 +8,8 @@ Also contains the home-page and some other simple pages.
 #### snowfishapp
 - The actual app I want to create.
 ## Requirements
-Django 4.2.2\
-python 3.11.3\
+Django 5.2 LTS\
+Python 3.13\
 psycopg2
 
 ## Local development
