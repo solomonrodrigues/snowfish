@@ -32,8 +32,10 @@ class Contact(TemplateView):
 
 
 def handle_404(request, exception):
-    return render(request, '404.html', status=404)
+    context = {'code': 404, 'title': 'Page Not Found', 'message': "Oops! The page you're looking for could not be found."}
+    return render(request, 'error.html', context, status=404)
 
 
 def handle_500(request):
-    return render(request, '500.html', status=500)
+    context = {'code': 500, 'title': 'Internal Server Error', 'message': 'Oops! Something went wrong on our server. Please try again later.'}
+    return render(request, 'error.html', context, status=500)
