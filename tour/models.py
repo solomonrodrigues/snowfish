@@ -22,8 +22,12 @@ class TourDate(models.Model):
         return f'{self.venue}, {self.date}'
 
     def save(self, *args, **kwargs):
-        # just check if name or location.name has changed
-        self.slug = '-'.join((slugify(self.venue), slugify(self.date)))
+        # Set once so shared links keep working; add -2, -3 for a second show at the same venue that day.
+        if not self.slug:
+            base = '-'.join((slugify(self.venue), slugify(self.date)))
+            self.slug, n = base, 2
+            while TourDate.objects.filter(slug=self.slug).exclude(pk=self.pk).exists():
+                self.slug, n = f'{base}-{n}', n + 1
         super(TourDate, self).save(*args, **kwargs)
 
     def get_absolute_url(self):
