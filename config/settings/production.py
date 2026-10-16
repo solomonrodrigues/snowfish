@@ -7,22 +7,18 @@ SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = False
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        # Neon database in Sydney, connected in Vercel with the SYD_ prefix.
-        'NAME': os.environ.get('SYD_POSTGRES_DATABASE', 'snowfishdb'),
-        'USER': os.environ.get('SYD_POSTGRES_USER', ''),
-        'PASSWORD': os.environ.get('SYD_POSTGRES_PASSWORD', ''),
-        'HOST': os.environ.get('SYD_POSTGRES_HOST', ''),
-        'PORT': os.environ.get('POSTGRES_PORT', ''),
-        # Opening a connection to the remote database costs ~1.5s; reuse it across requests.
-        'CONN_MAX_AGE': 60,
-        'CONN_HEALTH_CHECKS': True,
-        # Required behind a transaction-mode pooler (Vercel Postgres).
-        'DISABLE_SERVER_SIDE_CURSORS': True,
-    }
-}
+DATABASES['default'].update({
+    # Neon database in Sydney, connected in Vercel with the SYD_ prefix.
+    'NAME': os.environ.get('SYD_POSTGRES_DATABASE', 'snowfishdb'),
+    'USER': os.environ.get('SYD_POSTGRES_USER', ''),
+    'PASSWORD': os.environ.get('SYD_POSTGRES_PASSWORD', ''),
+    'HOST': os.environ.get('SYD_POSTGRES_HOST', ''),
+    # Opening a connection to the remote database costs ~1.5s; reuse it across requests.
+    'CONN_MAX_AGE': 60,
+    'CONN_HEALTH_CHECKS': True,
+    # Required behind a transaction-mode pooler (Vercel Postgres).
+    'DISABLE_SERVER_SIDE_CURSORS': True,
+})
 
 ALLOWED_HOSTS = [
     '.snowfish.com.au',
@@ -54,8 +50,6 @@ sentry_sdk.init(
     environment="prod",
     integrations=[DjangoIntegration()]
 )
-
-SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 # Prod Security Settings
 
@@ -95,15 +89,10 @@ MANAGERS = [
 
 IGNORABLE_404_URLS = []
 
-STATIC_URL = '/static/'
-
 # Include the path to the 'static' directory within the 'layout' app
 STATICFILES_DIRS = [
     BASE_DIR / 'layout' / 'static',
 ]
-
-# Specify the directory where 'collectstatic' will gather static files for deployment
-STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 
 # Vercel runs collectstatic in the same build as the function, so the manifest is always present.
 STORAGES = {
