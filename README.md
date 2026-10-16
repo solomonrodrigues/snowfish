@@ -20,6 +20,14 @@ docker build . -t snowfish
 docker run snowfish
 ```
 
+## Deployment
+Vercel deploys `master` to production and other branches to previews, using Vercel's Django framework preset.
+- Python version comes from `.python-version`; dependencies from `requirements.txt`.
+- Vercel runs `collectstatic` (because `STATIC_ROOT` is set) and serves `/static/` from its CDN.
+- `vercel_build.py` runs `migrate` on production builds only. Migrations must be committed; nothing runs `makemigrations` on deploy.
+- Previews have no database, so home, tour and blog pages error there.
+- Blog content backup (restore into an empty blog table): `python manage.py loaddata blog_backup`.
+
 ## Resources
 https://www.w3schools.com/bootstrap/bootstrap_theme_band.asp
 

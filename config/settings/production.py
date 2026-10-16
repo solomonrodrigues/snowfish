@@ -99,9 +99,9 @@ STATICFILES_DIRS = [
 # Specify the directory where 'collectstatic' will gather static files for deployment
 STATIC_ROOT = BASE_DIR / 'staticfiles_build' / 'static'
 
-# Whitenoise settings. Not the Manifest variant: the function bundle has no staticfiles.json, and a missing entry crashes every page.
+# Vercel runs collectstatic in the same build as the function, so the manifest is always present.
 STORAGES = {
     "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
-    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage"},
 }
 
