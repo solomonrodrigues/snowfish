@@ -3,7 +3,7 @@ from .base import *
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
-SECRET_KEY = "s1et6#@d_^ebw9aq83t2@kpmox9s6c=#%6(ywx-k9+6ex6=##h"
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 DEBUG = False
 
