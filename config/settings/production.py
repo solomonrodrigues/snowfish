@@ -10,11 +10,17 @@ DEBUG = False
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('POSTGRES_DATABASE', 'snowfishdb'),
-        'USER': os.environ.get('POSTGRES_USER', ''),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', ''),
-        'HOST': os.environ.get('POSTGRES_HOST', ''),
+        # Neon database in Sydney, connected in Vercel with the SYD_ prefix.
+        'NAME': os.environ.get('SYD_POSTGRES_DATABASE', 'snowfishdb'),
+        'USER': os.environ.get('SYD_POSTGRES_USER', ''),
+        'PASSWORD': os.environ.get('SYD_POSTGRES_PASSWORD', ''),
+        'HOST': os.environ.get('SYD_POSTGRES_HOST', ''),
         'PORT': os.environ.get('POSTGRES_PORT', ''),
+        # Opening a connection to the remote database costs ~1.5s; reuse it across requests.
+        'CONN_MAX_AGE': 60,
+        'CONN_HEALTH_CHECKS': True,
+        # Required behind a transaction-mode pooler (Vercel Postgres).
+        'DISABLE_SERVER_SIDE_CURSORS': True,
     }
 }
 
