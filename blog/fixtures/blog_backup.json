@@ -1,0 +1,410 @@
+[
+  {
+    "model": "blog.blogpost",
+    "pk": 1,
+    "fields": {
+      "title": "Welcome to the Website",
+      "timestamp": "2023-12-08"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 1,
+    "fields": {
+      "blog_post": 1,
+      "text": "I've wanted to create this website since we started the band 4 years ago. Kalan and I looked into it once and bought this domain but it was too hard for us so we settled for our link tree. Big kudos to Sol for utilising his developer knowledge and building the website from scratch."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 2,
+    "fields": {
+      "blog_post": 1,
+      "text": "It feels like a good time to have our own space to create and promote ourselves to the people who matter most to us, which is anyone taking the time to read this."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 3,
+    "fields": {
+      "blog_post": 1,
+      "text": "We've become fiercely independent after learning a few ins and outs of how the industry operates. It's a gloomy business and the best thing you can do as an artist is to retain as much control over your music and image as you can. Don't become a product and don't become a content creator."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 4,
+    "fields": {
+      "blog_post": 1,
+      "text": "Keep the focus on the music and the performances like when we started. It's so easy to lose that with so many distractions."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 5,
+    "fields": {
+      "blog_post": 1,
+      "text": "Stay posted for more blog posts..."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 6,
+    "fields": {
+      "blog_post": 1,
+      "text": "Jordan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 2,
+    "fields": {
+      "title": "Cowards - Release Day Thoughts",
+      "timestamp": "2024-02-29"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 7,
+    "fields": {
+      "blog_post": 2,
+      "text": "I wrote most of Cowards in May 2023. The three of us were sitting around just kicking back and with my acoustic guitar I was noodling around with the riff that Jordan wrote for The World Is Burning Down when I found this pattern in drop D that was initially really janky and choppy but I knew I'd found something righteous."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 8,
+    "fields": {
+      "blog_post": 2,
+      "text": "I have this philosophy with songwriting that through the infinite nature of the universe any combination of notes, noises and words that can be put together on an infinite timeline WILL be put together. In this way I like to think that every song has been written by the universe and as an artist it is my job to materialise the songs and sounds the way the universe intended."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 9,
+    "fields": {
+      "blog_post": 2,
+      "text": "When it comes to writing a song there is decisions to be made. When I'm making these decisions like the structure or the different layers that should be added I feel like a vessel being used by the universe and ultimately I am making a right or wrong decision."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 10,
+    "fields": {
+      "blog_post": 2,
+      "text": "My mission is to realise the musical potential written within the fabric of the universe."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 11,
+    "fields": {
+      "blog_post": 2,
+      "text": "Anyway, once Jordan heard the riff he said something about making it more fluid and the demo very quickly progressed. This one was destined for release."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 12,
+    "fields": {
+      "blog_post": 2,
+      "text": "Kalan."
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 3,
+    "fields": {
+      "title": "Pre-release thoughts: Can I Die Alone?",
+      "timestamp": "2024-05-09"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 13,
+    "fields": {
+      "blog_post": 3,
+      "text": "I keep on telling myself I'm gonna be more active on here because it is the journalistic equivalent of taking a shit - and everyone needs to shit. Life is one big laxative and the subsequent art created is just life shits."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 14,
+    "fields": {
+      "blog_post": 3,
+      "text": "ANYWAY Can I Die Alone? comes out tomorrow and I am excited to share it with the world. There's also a music video underway that should be releasing in the coming weeks. I feel like everyone that hears this song attaches themselves to a different part of the song - theres a section for everyone which I guess is very lyrically fitting. The song to me circles the ideas of ambiguity in life and the greyness of every action. I said before that life is one big laxative and alike to the actions of man there is a greyness to laxatives. A laxative when needed is great - when not needed is not great."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 15,
+    "fields": {
+      "blog_post": 3,
+      "text": "Maybe I should stop typing - enjoy the track."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 16,
+    "fields": {
+      "blog_post": 3,
+      "text": "Kalan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 4,
+    "fields": {
+      "title": "Can I Die Alone? - Release Day Thoughts",
+      "timestamp": "2024-05-10"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 17,
+    "fields": {
+      "blog_post": 4,
+      "text": "It’s been a while since we have consistently released new music but it feels good to do it again and even better with songs I really believe in."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 18,
+    "fields": {
+      "blog_post": 4,
+      "text": "I’ve had this one up my sleeve since the first album came out but it probably took 2 years of development both in the song structure and me growing up to get it to where it needed to be."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 19,
+    "fields": {
+      "blog_post": 4,
+      "text": "It’s the purest form of expression I’ve been able to translate into musical form so far and I really let myself be vulnerable as a vocalist/artist/whatever… 🥸"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 20,
+    "fields": {
+      "blog_post": 4,
+      "text": "If you get time today give her a listen x"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 21,
+    "fields": {
+      "blog_post": 4,
+      "text": "Jordan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 5,
+    "fields": {
+      "title": "Believe in My Love - Pre Release Thoughts",
+      "timestamp": "2024-08-05"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 22,
+    "fields": {
+      "blog_post": 5,
+      "text": "Hello again loyal snowfish.com.au blog post readers!"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 23,
+    "fields": {
+      "blog_post": 5,
+      "text": "Our song 'Believe in My Love' is coming out this Friday and technically this is the first place we've mentioned it. We've been holding onto this one for almost a year now and finally it is seeing the light of day. Our writing process these days has looked something like me writing an instrumental and demoing it out and excitedly showing Jordan and Sol my progress where they give pointers and say things that they want to do with it. Jordan then listens to the instrumental demo for days.. weeks.. months??? until he finally comes to me and says \"VOCAL TRACKING. NOW.\""
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 24,
+    "fields": {
+      "blog_post": 5,
+      "text": "When he came to me with the lyrics he had written I was amazed - I think out of all the lyricism that Jordan has combined with my music this is where we have clicked completely and been on the same wavelength. It's beautiful that we both add to the song in two different forms but still manage to end up telling the same story musically and lyrically."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 25,
+    "fields": {
+      "blog_post": 5,
+      "text": "The lyric \"Now that I'm dead, how am I still breathing?\" is exactly what I had in mind whilst writing this track. Kudos to Jordan for catching those themes exactly as I had envisioned."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 26,
+    "fields": {
+      "blog_post": 5,
+      "text": "Thanks and lots of love <3"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 27,
+    "fields": {
+      "blog_post": 5,
+      "text": "Kalan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 6,
+    "fields": {
+      "title": "A Mark in Time",
+      "timestamp": "2024-09-04"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 28,
+    "fields": {
+      "blog_post": 6,
+      "text": "It is always nice to know that whenever I may feel lost or overwhelmed the snowfish.com.au blog section will always be there for me (and it is there for you too loyal readers). Coming out of the studio with another few tracks recorded our vision for LP2 is clearer than ever and I've been tasked by Jordan to do a simple errand. \"Write our best song ever by February\"."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 29,
+    "fields": {
+      "blog_post": 6,
+      "text": "It's quite an intimidating ask but by Jordan's will, it will be done. I will be devoting the next few months of my life to this song - utilising old ideas, innovating with new ones. The result will be a stamp of my growth as a songwriter and composer and will stand in our discography as an embodiment of who Kalan is."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 30,
+    "fields": {
+      "blog_post": 6,
+      "text": "The song hasn't been written yet but if you are reading this after it's release - please evaluate it using this blog post for the KPI."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 31,
+    "fields": {
+      "blog_post": 6,
+      "text": "Wish me luck,"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 32,
+    "fields": {
+      "blog_post": 6,
+      "text": "Kalan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 7,
+    "fields": {
+      "title": "Dealing with Retrograde",
+      "timestamp": "2025-05-12"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 33,
+    "fields": {
+      "blog_post": 7,
+      "text": "Time is fleeting (very original thought, i know). With limited time and energy available to work on the music that I am truly passionate about it can almost feel labouring to put myself to work."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 34,
+    "fields": {
+      "blog_post": 7,
+      "text": "In life we are faced with only two options at any given point in time: consume or create. The balance of these two choices has begun to skew dramatically as what has been dubbed 'the attention economy' flourishes and grows within society - much like a weed. This is not to say that consumption is inherently worse than creation but a balance must be found, this may be a similar concept to my last blog post which can be summed up with 'consume to create'."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 35,
+    "fields": {
+      "blog_post": 7,
+      "text": "I find myself needing more time to work on what truly matters - wipe away the wasteful consumption and creation in order to restore myself to a passionate, creative state."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 36,
+    "fields": {
+      "blog_post": 7,
+      "text": "Kalan"
+    }
+  },
+  {
+    "model": "blog.blogpost",
+    "pk": 8,
+    "fields": {
+      "title": "LP2 Recording Sessions Completed",
+      "timestamp": "2025-09-21"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 37,
+    "fields": {
+      "blog_post": 8,
+      "text": "2 Years."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 38,
+    "fields": {
+      "blog_post": 8,
+      "text": "September 2023 marked the first studio session recording material for our upcoming sophomore album. This has been a major step-up and maturity of our sound and I’m really excited to finalise the project and put it out into the world."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 39,
+    "fields": {
+      "blog_post": 8,
+      "text": "Everything on this album feels as though it has marked an era in my life that I will forever look back on fondly - largely tying a neat little bow around the back end of my teenage years; however life is only just getting started and I intend on getting the most out of this beautiful existence we are graciously given by the universal powers that be."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 40,
+    "fields": {
+      "blog_post": 8,
+      "text": "As we prepare to share and release what we have been collating over the years I am already chomping at the bit to get started on LP3 material with Jordan and Sol to find our next sound which should evolve as we evolve together as men and brothers. We will continue to slowly grow a catalogue of music that represents a journey which we can be proud of."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 41,
+    "fields": {
+      "blog_post": 8,
+      "text": "Let it be known that Snowfish 6 years from inception is still only just getting started."
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 42,
+    "fields": {
+      "blog_post": 8,
+      "text": "Breathe love into this world,"
+    }
+  },
+  {
+    "model": "blog.paragraph",
+    "pk": 43,
+    "fields": {
+      "blog_post": 8,
+      "text": "Kalan"
+    }
+  }
+]
