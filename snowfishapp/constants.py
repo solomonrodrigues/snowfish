@@ -1,9 +1,16 @@
 RELEASES = [
     {
+        "title": "Life and Death",
+        "release_date": "10 July 2026",
+        "link": "https://gyro.to/LifeandDeath",
+        "image": "layout/img/releases/life_and_death.webp",
+        "alt_text": "Life and Death",
+    },
+    {
         "title": "Bring Me to an End",
         "release_date": "1 August 2025",
-        "link": "https://gyro.to/PrepareYourselfforWhatComesNext",
-        "image": "layout/img/releases/believe_in_my_love.webp",
+        "link": "https://gyro.to/LifeandDeath",
+        "image": "layout/img/releases/bring_me_to_an_end.webp",
         "alt_text": "Bring Me to an End",
     },
     {
