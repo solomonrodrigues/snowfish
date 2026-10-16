@@ -36,4 +36,4 @@ def handle_404(request, exception):
 
 
 def handle_500(request):
-    return render(request, '500.html', status=404)
+    return render(request, '500.html', status=500)
