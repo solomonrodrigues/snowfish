@@ -1,4 +1,3 @@
-version: '3.8'
 
 services: # the different images that will be running as containers
   web: # service name
@@ -45,7 +44,6 @@ services: # the different images that will be running as containers
     image: postgres:17-alpine
 
     volumes:
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - postgres_data:/var/lib/postgresql/data/
 
 # access credentials from the .env file

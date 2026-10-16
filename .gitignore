@@ -52,4 +52,3 @@ Thumbs.db
 .env
 .envs/
 staticfiles_build/
-init.sql
