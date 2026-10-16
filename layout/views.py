@@ -31,6 +31,10 @@ class Contact(TemplateView):
     template_name = 'contact.html'
 
 
+class Store(TemplateView):
+    template_name = 'store.html'
+
+
 def handle_404(request, exception):
     context = {'code': 404, 'title': 'Page Not Found', 'message': "Oops! The page you're looking for could not be found."}
     return render(request, 'error.html', context, status=404)

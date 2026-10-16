@@ -1,0 +1,105 @@
+{% extends 'fullbase.html' %}
+{% load static %}
+
+{% block title %}Snowfish | Store{% endblock %}
+{% block og-title %}Snowfish | Store{% endblock %}
+
+{% block content %}
+<!--
+THESIS: the merch is the page; big photos and every item ends in a message to the band. Refuses a product-card grid with a cart the band doesn't run.
+OWN-WORLD: inherits the site (off-black ground, Archivo caps, teal theme buttons); the tees' own purple marks the tee flip.
+STORY: see it large, read price and sizes, DM to order; how ordering works closes the page; a pinned bar keeps the DM one tap away.
+FIRST VIEWPORT: heading, one line of how it works, then the first tee at full lookbook scale; it wipes front to back on hover, focus or tap.
+FORM: lookbook (surface seed 16198d3c, dealt lead).
+-->
+<div class="row">
+  <div class="d-flex justify-content-center">
+    <div class="py-lg-5 py-4 col-10 store">
+
+      <header class="store-intro">
+        <h1>Store</h1>
+        <p class="store-lede">Shirts and records, straight from the band. There's no checkout: message us and we'll sort the rest.</p>
+      </header>
+
+      <article class="store-item" id="tmu-tee" aria-labelledby="tmu-tee-title">
+        <div class="store-photo store-flip" data-flip>
+          <img class="store-flip-front" src="{% static 'layout/img/store/tmu_tee_front.webp' %}" alt="Black The Monster Upstairs tee, front: purple Snowfish logo" width="1200" height="1200" fetchpriority="high">
+          <img class="store-flip-back" src="{% static 'layout/img/store/tmu_tee_back.webp' %}" alt="Black The Monster Upstairs tee, back: purple The Monster Upstairs artwork" width="1200" height="1200" loading="lazy">
+          <div class="store-flip-toggle" role="group" aria-label="Tee view">
+            <button type="button" aria-pressed="true" data-side="front">Front</button>
+            <button type="button" aria-pressed="false" data-side="back">Back</button>
+          </div>
+        </div>
+        <div class="store-info">
+          <h2 id="tmu-tee-title">The Monster Upstairs Tee</h2>
+          <p class="store-price">$29.99 <span>AUD</span></p>
+          <p>Black tee. Purple Snowfish logo on the front, The Monster Upstairs artwork across the back. Sizes S to XXL.</p>
+          <div class="store-actions">
+            <a class="button button--lg" href="https://ig.me/m/snowfishband" target="_blank" rel="noopener">DM to order</a>
+            <a class="store-alt" href="mailto:snowfishband@gmail.com?subject=Order%3A%20The%20Monster%20Upstairs%20Tee">or email us</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="store-item" id="tmu-vinyl" aria-labelledby="tmu-vinyl-title">
+        <div class="store-photo">
+          <img src="{% static 'layout/img/store/tmu_vinyl.webp' %}" alt="The Monster Upstairs vinyl, front and back covers held up" width="1200" height="1200" loading="lazy">
+        </div>
+        <div class="store-info">
+          <h2 id="tmu-vinyl-title">The Monster Upstairs on Vinyl</h2>
+          <p class="store-price">$45.00 <span>AUD</span></p>
+          <p>The Monster Upstairs on LP. Eleven tracks, including Burn From Within, Trapped and Ghost.</p>
+          <div class="store-actions">
+            <a class="button button--lg" href="https://ig.me/m/snowfishband" target="_blank" rel="noopener">DM to order</a>
+            <a class="store-alt" href="mailto:snowfishband@gmail.com?subject=Order%3A%20The%20Monster%20Upstairs%20vinyl">or email us</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="store-item" id="ghost-tee" aria-labelledby="ghost-tee-title">
+        <div class="store-photo">
+          <img src="{% static 'layout/img/store/ghost_tee.webp' %}" alt="Black Ghost tee with a hand-drawn ghost, a monster and the Snowfish wordmark in white" width="1200" height="1200" loading="lazy">
+        </div>
+        <div class="store-info">
+          <h2 id="ghost-tee-title">Ghost Tee</h2>
+          <p class="store-price">$24.99 <span>AUD</span></p>
+          <p>Black tee with a hand-drawn ghost, a monster and the Snowfish wordmark in white. Sizes S, M and L.</p>
+          <div class="store-actions">
+            <a class="button button--lg" href="https://ig.me/m/snowfishband" target="_blank" rel="noopener">DM to order</a>
+            <a class="store-alt" href="mailto:snowfishband@gmail.com?subject=Order%3A%20Ghost%20Tee">or email us</a>
+          </div>
+        </div>
+      </article>
+
+      <section class="store-how" aria-labelledby="store-how-title">
+        <h2 id="store-how-title">How ordering works</h2>
+        <ol>
+          <li>Message us on Instagram with what you're after, and your size for tees.</li>
+          <li>We'll confirm it's in stock, sort out postage, and tell you how to pay.</li>
+          <li>We post within Australia, or you can pick it up at <a href="{% url 'tour' %}">one of our shows</a>.</li>
+        </ol>
+      </section>
+
+      <aside class="store-bar" aria-label="Order">
+        <span class="store-bar-text">Order via Instagram DM</span>
+        <a class="button button--sm" href="https://ig.me/m/snowfishband" target="_blank" rel="noopener">Message us</a>
+        <span class="store-bar-alt"><a href="https://m.me/snowfishband" target="_blank" rel="noopener">Facebook</a> &middot; <a href="mailto:snowfishband@gmail.com?subject=Merch%20order">Email</a></span>
+      </aside>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_javascript %}
+<script>
+  document.querySelectorAll('[data-flip]').forEach(function (flip) {
+    var buttons = flip.querySelectorAll('[data-side]');
+    function show(side) {
+      flip.classList.toggle('is-back', side === 'back');
+      buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.side === side)); });
+    }
+    buttons.forEach(function (b) { b.addEventListener('click', function () { show(b.dataset.side); }); });
+  });
+</script>
+{% endblock %}
